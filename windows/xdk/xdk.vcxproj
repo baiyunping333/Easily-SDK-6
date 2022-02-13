@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EE48B4D2-6A3C-44D6-9A28-A8720486B5C7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xdk</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>D:\Easily-app-6\windows\sbin\api\</OutDir>
+    <IntDir>d:\easily-tmp\windows\$(ProjectName)\</IntDir>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSdk_71A_LibraryPath_x86);..\lib\;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSdk_71A_IncludePath);..\..\xdk\;..\..\include\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);..\lib\x64;</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>D:\Easily-app-6\windows\sbin64\api\</OutDir>
+    <IntDir>d:\easily-tmp\windows\$(Platform)\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\xdk\;..\..\include\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>D:\Easily-app-6\windows\bin\</OutDir>
+    <IntDir>d:\easily-tmp\windows\$(ProjectName)\</IntDir>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);..\lib\;</LibraryPath>
+    <TargetName>$(ProjectName)60</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSdk_71A_IncludePath);..\..\xdk\;..\..\include\;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);..\lib\x64;</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>D:\Easily-app-6\windows\sbin64\api\</OutDir>
+    <IntDir>d:\easily-tmp\windows\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\xdk\;..\..\include\;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XDK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\lib\$(TargetName).lib</ImportLibrary>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ManifestFile>$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XDK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\lib\x64\$(TargetName).lib</ImportLibrary>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XDK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XDK_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>..\lib\x64\$(ProjectName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\xdk\acp\acp_help.c" />
+    <ClCompile Include="..\..\xdk\acp\acp_gb2312.c" />
+    <ClCompile Include="..\..\xdk\acp\acp_share.c" />
+    <ClCompile Include="..\..\xdk\acp\acp_table.c" />
+    <ClCompile Include="..\..\xdk\acp\acp_utf8.c" />
+    <ClCompile Include="..\..\xdk\actable.c" />
+    <ClCompile Include="..\..\xdk\bar\barcode.c" />
+    <ClCompile Include="..\..\xdk\bar\bitstream.c" />
+    <ClCompile Include="..\..\xdk\bar\mask.c" />
+    <ClCompile Include="..\..\xdk\bar\mmask.c" />
+    <ClCompile Include="..\..\xdk\bar\mqrspec.c" />
+    <ClCompile Include="..\..\xdk\bar\qrcode.c" />
+    <ClCompile Include="..\..\xdk\bar\qrencode.c" />
+    <ClCompile Include="..\..\xdk\bar\qrinput.c" />
+    <ClCompile Include="..\..\xdk\bar\qrspec.c" />
+    <ClCompile Include="..\..\xdk\bar\rscode.c" />
+    <ClCompile Include="..\..\xdk\bar\split.c" />
+    <ClCompile Include="..\..\xdk\base64.c" />
+    <ClCompile Include="..\..\xdk\binatree.c" />
+    <ClCompile Include="..\..\xdk\bioinf.c" />
+    <ClCompile Include="..\..\xdk\bplustree.c" />
+    <ClCompile Include="..\..\xdk\clrutil.c" />
+    <ClCompile Include="..\..\xdk\crypt\aes.c" />
+    <ClCompile Include="..\..\xdk\crypt\arc.c" />
+    <ClCompile Include="..\..\xdk\crypt\asn1.c" />
+    <ClCompile Include="..\..\xdk\crypt\b64.c" />
+    <ClCompile Include="..\..\xdk\crypt\chacha20.c" />
+    <ClCompile Include="..\..\xdk\crypt\chachapoly.c" />
+    <ClCompile Include="..\..\xdk\crypt\cipher.c" />
+    <ClCompile Include="..\..\xdk\crypt\crc.c" />
+    <ClCompile Include="..\..\xdk\crypt\dbrg_ctr.c" />
+    <ClCompile Include="..\..\xdk\crypt\dbrg_hmac.c" />
+    <ClCompile Include="..\..\xdk\crypt\des.c" />
+    <ClCompile Include="..\..\xdk\crypt\dhm.c" />
+    <ClCompile Include="..\..\xdk\crypt\ecdh.c" />
+    <ClCompile Include="..\..\xdk\crypt\ecdsa.c" />
+    <ClCompile Include="..\..\xdk\crypt\ecp.c" />
+    <ClCompile Include="..\..\xdk\crypt\ecp_test.c" />
+    <ClCompile Include="..\..\xdk\crypt\entropy.c" />
+    <ClCompile Include="..\..\xdk\crypt\entropy_poll.c" />
+    <ClCompile Include="..\..\xdk\crypt\gcm.c" />
+    <ClCompile Include="..\..\xdk\crypt\havege.c" />
+    <ClCompile Include="..\..\xdk\crypt\hkdf.c" />
+    <ClCompile Include="..\..\xdk\crypt\hll.c" />
+    <ClCompile Include="..\..\xdk\crypt\md2.c" />
+    <ClCompile Include="..\..\xdk\crypt\md4.c" />
+    <ClCompile Include="..\..\xdk\crypt\md5.c" />
+    <ClCompile Include="..\..\xdk\crypt\mdwrap.c" />
+    <ClCompile Include="..\..\xdk\crypt\mpi.c" />
+    <ClCompile Include="..\..\xdk\crypt\mur.c" />
+    <ClCompile Include="..\..\xdk\crypt\oid.c" />
+    <ClCompile Include="..\..\xdk\crypt\pem.c" />
+    <ClCompile Include="..\..\xdk\crypt\pkwrap.c" />
+    <ClCompile Include="..\..\xdk\crypt\poly1305.c" />
+    <ClCompile Include="..\..\xdk\crypt\prf.c" />
+    <ClCompile Include="..\..\xdk\crypt\rand.c" />
+    <ClCompile Include="..\..\xdk\crypt\ripe160.c" />
+    <ClCompile Include="..\..\xdk\crypt\rsa.c" />
+    <ClCompile Include="..\..\xdk\crypt\rsa_test.c" />
+    <ClCompile Include="..\..\xdk\crypt\sha1.c" />
+    <ClCompile Include="..\..\xdk\crypt\sha2.c" />
+    <ClCompile Include="..\..\xdk\crypt\sha4.c" />
+    <ClCompile Include="..\..\xdk\crypt\sip.c" />
+    <ClCompile Include="..\..\xdk\crypt\sm3.c" />
+    <ClCompile Include="..\..\xdk\crypt\timing.c" />
+    <ClCompile Include="..\..\xdk\crypt\x509.c" />
+    <ClCompile Include="..\..\xdk\crypt\x509_crl.c" />
+    <ClCompile Include="..\..\xdk\crypt\x509_crt.c" />
+    <ClCompile Include="..\..\xdk\crypt\x509_csr.c" />
+    <ClCompile Include="..\..\xdk\crypt\x509_test.c" />
+    <ClCompile Include="..\..\xdk\der.c" />
+    <ClCompile Include="..\..\xdk\dicttable.c" />
+    <ClCompile Include="..\..\xdk\dlink.c" />
+    <ClCompile Include="..\..\xdk\escape.c" />
+    <ClCompile Include="..\..\xdk\expres.c" />
+    <ClCompile Include="..\..\xdk\filetable.c" />
+    <ClCompile Include="..\..\xdk\fontutil.c" />
+    <ClCompile Include="..\..\xdk\geo\geo.c" />
+    <ClCompile Include="..\..\xdk\gly\gly_finder.c" />
+    <ClCompile Include="..\..\xdk\gly\gly_loader.c" />
+    <ClCompile Include="..\..\xdk\gly\gly_pattern.c" />
+    <ClCompile Include="..\..\xdk\gly\ttf_loader.c" />
+    <ClCompile Include="..\..\xdk\hashtable.c" />
+    <ClCompile Include="..\..\xdk\img\bmp.c" />
+    <ClCompile Include="..\..\xdk\img\jpg.c" />
+    <ClCompile Include="..\..\xdk\img\pdg.c" />
+    <ClCompile Include="..\..\xdk\img\png.c" />
+    <ClCompile Include="..\..\xdk\conv.c" />
+    <ClCompile Include="..\..\xdk\imp\impassert.c" />
+    <ClCompile Include="..\..\xdk\imp\impasync.c" />
+    <ClCompile Include="..\..\xdk\imp\impblock.c" />
+    <ClCompile Include="..\..\xdk\imp\impcache.c" />
+    <ClCompile Include="..\..\xdk\imp\impcomm.c" />
+    <ClCompile Include="..\..\xdk\imp\impcons.c" />
+    <ClCompile Include="..\..\xdk\imp\impdate.c" />
+    <ClCompile Include="..\..\xdk\imp\imperror.c" />
+    <ClCompile Include="..\..\xdk\imp\impjmp.c" />
+    <ClCompile Include="..\..\xdk\imp\impmbcs.c" />
+    <ClCompile Include="..\..\xdk\imp\impmem.c" />
+    <ClCompile Include="..\..\xdk\imp\imppipe.c" />
+    <ClCompile Include="..\..\xdk\imp\impproc.c" />
+    <ClCompile Include="..\..\xdk\imp\imprandom.c" />
+    <ClCompile Include="..\..\xdk\imp\impshare.c" />
+    <ClCompile Include="..\..\xdk\imp\impsock.c" />
+    <ClCompile Include="..\..\xdk\imp\impthr.c" />
+    <ClCompile Include="..\..\xdk\imp\imptimer.c" />
+    <ClCompile Include="..\..\xdk\imp\impuncf.c" />
+    <ClCompile Include="..\..\xdk\integerarray.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcapimin.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcapistd.c" />
+    <ClCompile Include="..\..\xdk\jpg\jccoefct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jccolor.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcdctmgr.c" />
+    <ClCompile Include="..\..\xdk\jpg\jchuff.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcinit.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcmainct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcmarker.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcmaster.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcomapi.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcparam.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcphuff.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcprepct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jcsample.c" />
+    <ClCompile Include="..\..\xdk\jpg\jctrans.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdapimin.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdapistd.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdatadst.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdatasrc.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdcoefct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdcolor.c" />
+    <ClCompile Include="..\..\xdk\jpg\jddctmgr.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdhuff.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdinput.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdmainct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdmarker.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdmaster.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdmerge.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdphuff.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdpostct.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdsample.c" />
+    <ClCompile Include="..\..\xdk\jpg\jdtrans.c" />
+    <ClCompile Include="..\..\xdk\jpg\jerror.c" />
+    <ClCompile Include="..\..\xdk\jpg\jfdctflt.c" />
+    <ClCompile Include="..\..\xdk\jpg\jfdctfst.c" />
+    <ClCompile Include="..\..\xdk\jpg\jfdctint.c" />
+    <ClCompile Include="..\..\xdk\jpg\jidctflt.c" />
+    <ClCompile Include="..\..\xdk\jpg\jidctfst.c" />
+    <ClCompile Include="..\..\xdk\jpg\jidctint.c" />
+    <ClCompile Include="..\..\xdk\jpg\jidctred.c" />
+    <ClCompile Include="..\..\xdk\jpg\jmemmgr.c" />
+    <ClCompile Include="..\..\xdk\jpg\jmemnobs.c" />
+    <ClCompile Include="..\..\xdk\jpg\jquant1.c" />
+    <ClCompile Include="..\..\xdk\jpg\jquant2.c" />
+    <ClCompile Include="..\..\xdk\jpg\jutils.c" />
+    <ClCompile Include="..\..\xdk\linear.c" />
+    <ClCompile Include="..\..\xdk\mgc\mgly_fixed.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdev_bitmap.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color16.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color24.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color32.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_gray.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_mono.c" />
+    <ClCompile Include="..\..\xdk\mgc\mdrv_raster.c" />
+    <ClCompile Include="..\..\xdk\mgc\mfnt_fixed.c" />
+    <ClCompile Include="..\..\xdk\mgc\mem_gc.c" />
+    <ClCompile Include="..\..\xdk\mgc\mem_pixmap.c" />
+    <ClCompile Include="..\..\xdk\mgc\mem_paper.c" />
+    <ClCompile Include="..\..\xdk\png\pngerror.c" />
+    <ClCompile Include="..\..\xdk\png\pngget.c" />
+    <ClCompile Include="..\..\xdk\png\pnglib.c" />
+    <ClCompile Include="..\..\xdk\png\pngmem.c" />
+    <ClCompile Include="..\..\xdk\png\pngpread.c" />
+    <ClCompile Include="..\..\xdk\png\pngread.c" />
+    <ClCompile Include="..\..\xdk\png\pngrio.c" />
+    <ClCompile Include="..\..\xdk\png\pngrtran.c" />
+    <ClCompile Include="..\..\xdk\png\pngrutil.c" />
+    <ClCompile Include="..\..\xdk\png\pngset.c" />
+    <ClCompile Include="..\..\xdk\png\pngtrans.c" />
+    <ClCompile Include="..\..\xdk\png\pngwio.c" />
+    <ClCompile Include="..\..\xdk\png\pngwrite.c" />
+    <ClCompile Include="..\..\xdk\png\pngwtran.c" />
+    <ClCompile Include="..\..\xdk\png\pngwutil.c" />
+    <ClCompile Include="..\..\xdk\spinlock.c" />
+    <ClCompile Include="..\..\xdk\lua\lapi.c" />
+    <ClCompile Include="..\..\xdk\lua\lauxlib.c" />
+    <ClCompile Include="..\..\xdk\lua\lbaselib.c" />
+    <ClCompile Include="..\..\xdk\lua\lcode.c" />
+    <ClCompile Include="..\..\xdk\lua\lcorolib.c" />
+    <ClCompile Include="..\..\xdk\lua\lctype.c" />
+    <ClCompile Include="..\..\xdk\lua\ldblib.c" />
+    <ClCompile Include="..\..\xdk\lua\ldebug.c" />
+    <ClCompile Include="..\..\xdk\lua\ldo.c" />
+    <ClCompile Include="..\..\xdk\lua\ldump.c" />
+    <ClCompile Include="..\..\xdk\lua\lfunc.c" />
+    <ClCompile Include="..\..\xdk\lua\lgc.c" />
+    <ClCompile Include="..\..\xdk\lua\linit.c" />
+    <ClCompile Include="..\..\xdk\lua\liolib.c" />
+    <ClCompile Include="..\..\xdk\lua\llex.c" />
+    <ClCompile Include="..\..\xdk\lua\lmathlib.c" />
+    <ClCompile Include="..\..\xdk\lua\lmem.c" />
+    <ClCompile Include="..\..\xdk\lua\loadlib.c" />
+    <ClCompile Include="..\..\xdk\lua\lobject.c" />
+    <ClCompile Include="..\..\xdk\lua\lopcodes.c" />
+    <ClCompile Include="..\..\xdk\lua\loslib.c" />
+    <ClCompile Include="..\..\xdk\lua\lparser.c" />
+    <ClCompile Include="..\..\xdk\lua\lstate.c" />
+    <ClCompile Include="..\..\xdk\lua\lstring.c" />
+    <ClCompile Include="..\..\xdk\lua\lstrlib.c" />
+    <ClCompile Include="..\..\xdk\lua\ltable.c" />
+    <ClCompile Include="..\..\xdk\lua\ltablib.c" />
+    <ClCompile Include="..\..\xdk\lua\ltm.c" />
+    <ClCompile Include="..\..\xdk\lua\lua.c" />
+    <ClCompile Include="..\..\xdk\lua\luac.c" />
+    <ClCompile Include="..\..\xdk\lua\lundump.c" />
+    <ClCompile Include="..\..\xdk\lua\lutf8lib.c" />
+    <ClCompile Include="..\..\xdk\lua\lvm.c" />
+    <ClCompile Include="..\..\xdk\lua\lzio.c" />
+    <ClCompile Include="..\..\xdk\macro.c" />
+    <ClCompile Include="..\..\xdk\map.c" />
+    <ClCompile Include="..\..\xdk\matrix.c" />
+    <ClCompile Include="..\..\xdk\message.c" />
+    <ClCompile Include="..\..\xdk\money.c" />
+    <ClCompile Include="..\..\xdk\multitree.c" />
+    <ClCompile Include="..\..\xdk\net\netcoap.c" />
+    <ClCompile Include="..\..\xdk\net\netdtls.c" />
+    <ClCompile Include="..\..\xdk\net\netdtls10.c" />
+    <ClCompile Include="..\..\xdk\net\netdtls12.c" />
+    <ClCompile Include="..\..\xdk\net\netfile.c" />
+    <ClCompile Include="..\..\xdk\net\nethttp.c" />
+    <ClCompile Include="..\..\xdk\net\netmqtt.c" />
+    <ClCompile Include="..\..\xdk\net\netpacs.c" />
+    <ClCompile Include="..\..\xdk\net\netssh.c" />
+    <ClCompile Include="..\..\xdk\net\netssl.c" />
+    <ClCompile Include="..\..\xdk\net\netssl30.c" />
+    <ClCompile Include="..\..\xdk\net\nettcp.c" />
+    <ClCompile Include="..\..\xdk\net\nettftp.c" />
+    <ClCompile Include="..\..\xdk\net\nettls10.c" />
+    <ClCompile Include="..\..\xdk\net\nettls11.c" />
+    <ClCompile Include="..\..\xdk\net\nettls12.c" />
+    <ClCompile Include="..\..\xdk\net\nettls13.c" />
+    <ClCompile Include="..\..\xdk\net\netudp.c" />
+    <ClCompile Include="..\..\xdk\net\srvhttp.c" />
+    <ClCompile Include="..\..\xdk\net\srvtcp.c" />
+    <ClCompile Include="..\..\xdk\net\srvudp.c" />
+    <ClCompile Include="..\..\xdk\nmath\arith.c" />
+    <ClCompile Include="..\..\xdk\nmath\bd0.c" />
+    <ClCompile Include="..\..\xdk\nmath\bessel_i.c" />
+    <ClCompile Include="..\..\xdk\nmath\bessel_j.c" />
+    <ClCompile Include="..\..\xdk\nmath\bessel_k.c" />
+    <ClCompile Include="..\..\xdk\nmath\bessel_y.c" />
+    <ClCompile Include="..\..\xdk\nmath\beta.c" />
+    <ClCompile Include="..\..\xdk\nmath\chebyshev.c" />
+    <ClCompile Include="..\..\xdk\nmath\choose.c" />
+    <ClCompile Include="..\..\xdk\nmath\cospi.c" />
+    <ClCompile Include="..\..\xdk\nmath\d1mach.c" />
+    <ClCompile Include="..\..\xdk\nmath\dbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\dbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\dcauchy.c" />
+    <ClCompile Include="..\..\xdk\nmath\dchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\dexp.c" />
+    <ClCompile Include="..\..\xdk\nmath\df.c" />
+    <ClCompile Include="..\..\xdk\nmath\dgamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\dgeom.c" />
+    <ClCompile Include="..\..\xdk\nmath\dhyper.c" />
+    <ClCompile Include="..\..\xdk\nmath\dlnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\dlogis.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnf.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\dnt.c" />
+    <ClCompile Include="..\..\xdk\nmath\dpois.c" />
+    <ClCompile Include="..\..\xdk\nmath\dt.c" />
+    <ClCompile Include="..\..\xdk\nmath\dunif.c" />
+    <ClCompile Include="..\..\xdk\nmath\dweibull.c" />
+    <ClCompile Include="..\..\xdk\nmath\expm1.c" />
+    <ClCompile Include="..\..\xdk\nmath\fmax2.c" />
+    <ClCompile Include="..\..\xdk\nmath\fmin2.c" />
+    <ClCompile Include="..\..\xdk\nmath\fprec.c" />
+    <ClCompile Include="..\..\xdk\nmath\fround.c" />
+    <ClCompile Include="..\..\xdk\nmath\fsign.c" />
+    <ClCompile Include="..\..\xdk\nmath\ftrunc.c" />
+    <ClCompile Include="..\..\xdk\nmath\gamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\gammalims.c" />
+    <ClCompile Include="..\..\xdk\nmath\gamma_cody.c" />
+    <ClCompile Include="..\..\xdk\nmath\i1mach.c" />
+    <ClCompile Include="..\..\xdk\nmath\imax2.c" />
+    <ClCompile Include="..\..\xdk\nmath\imin2.c" />
+    <ClCompile Include="..\..\xdk\nmath\lbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\lgamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\lgammacor.c" />
+    <ClCompile Include="..\..\xdk\nmath\log1p.c" />
+    <ClCompile Include="..\..\xdk\nmath\pbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\pbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\pcauchy.c" />
+    <ClCompile Include="..\..\xdk\nmath\pchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\phyper.c" />
+    <ClCompile Include="..\..\xdk\nmath\pexp.c" />
+    <ClCompile Include="..\..\xdk\nmath\pf.c" />
+    <ClCompile Include="..\..\xdk\nmath\pgamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\pgeom.c" />
+    <ClCompile Include="..\..\xdk\nmath\plnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\plogis.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnf.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\pnt.c" />
+    <ClCompile Include="..\..\xdk\nmath\polygamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\ppois.c" />
+    <ClCompile Include="..\..\xdk\nmath\pt.c" />
+    <ClCompile Include="..\..\xdk\nmath\ptukey.c" />
+    <ClCompile Include="..\..\xdk\nmath\punif.c" />
+    <ClCompile Include="..\..\xdk\nmath\pweibull.c" />
+    <ClCompile Include="..\..\xdk\nmath\qbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\qbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\qcauchy.c" />
+    <ClCompile Include="..\..\xdk\nmath\qchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\qexp.c" />
+    <ClCompile Include="..\..\xdk\nmath\qf.c" />
+    <ClCompile Include="..\..\xdk\nmath\qgamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\qgeom.c" />
+    <ClCompile Include="..\..\xdk\nmath\qhyper.c" />
+    <ClCompile Include="..\..\xdk\nmath\qlnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\qlogis.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnf.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\qnt.c" />
+    <ClCompile Include="..\..\xdk\nmath\qpois.c" />
+    <ClCompile Include="..\..\xdk\nmath\qt.c" />
+    <ClCompile Include="..\..\xdk\nmath\qtukey.c" />
+    <ClCompile Include="..\..\xdk\nmath\qunif.c" />
+    <ClCompile Include="..\..\xdk\nmath\qweibull.c" />
+    <ClCompile Include="..\..\xdk\nmath\rbeta.c" />
+    <ClCompile Include="..\..\xdk\nmath\rbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\rcauchy.c" />
+    <ClCompile Include="..\..\xdk\nmath\rchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\rexp.c" />
+    <ClCompile Include="..\..\xdk\nmath\rf.c" />
+    <ClCompile Include="..\..\xdk\nmath\rgamma.c" />
+    <ClCompile Include="..\..\xdk\nmath\rgeom.c" />
+    <ClCompile Include="..\..\xdk\nmath\rhyper.c" />
+    <ClCompile Include="..\..\xdk\nmath\rlnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\rlogis.c" />
+    <ClCompile Include="..\..\xdk\nmath\rmultinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\rnbinom.c" />
+    <ClCompile Include="..\..\xdk\nmath\rnchisq.c" />
+    <ClCompile Include="..\..\xdk\nmath\sunif.c" />
+    <ClCompile Include="..\..\xdk\nmath\rnorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\rpois.c" />
+    <ClCompile Include="..\..\xdk\nmath\rt.c" />
+    <ClCompile Include="..\..\xdk\nmath\runif.c" />
+    <ClCompile Include="..\..\xdk\nmath\rweibull.c" />
+    <ClCompile Include="..\..\xdk\nmath\sexp.c" />
+    <ClCompile Include="..\..\xdk\nmath\sign.c" />
+    <ClCompile Include="..\..\xdk\nmath\signrank.c" />
+    <ClCompile Include="..\..\xdk\nmath\snorm.c" />
+    <ClCompile Include="..\..\xdk\nmath\stirlerr.c" />
+    <ClCompile Include="..\..\xdk\nmath\times.c" />
+    <ClCompile Include="..\..\xdk\nmath\toms708.c" />
+    <ClCompile Include="..\..\xdk\nmath\wilcox.c" />
+    <ClCompile Include="..\..\xdk\nuid.c" />
+    <ClCompile Include="..\..\xdk\numericarray.c" />
+    <ClCompile Include="..\..\xdk\optparser.c" />
+    <ClCompile Include="..\..\xdk\prim.c" />
+    <ClCompile Include="..\..\xdk\queue.c" />
+    <ClCompile Include="..\..\xdk\set.c" />
+    <ClCompile Include="..\..\xdk\solarterms.c" />
+    <ClCompile Include="..\..\xdk\sort.c" />
+    <ClCompile Include="..\..\xdk\stacktable.c" />
+    <ClCompile Include="..\..\xdk\str.c" />
+    <ClCompile Include="..\..\xdk\stream.c" />
+    <ClCompile Include="..\..\xdk\stringarray.c" />
+    <ClCompile Include="..\..\xdk\stringtable.c" />
+    <ClCompile Include="..\..\xdk\strutil.c" />
+    <ClCompile Include="..\..\xdk\tdb\hkv.c" />
+    <ClCompile Include="..\..\xdk\tdb\tdb.c" />
+    <ClCompile Include="..\..\xdk\tdb\tkv.c" />
+    <ClCompile Include="..\..\xdk\trietree.c" />
+    <ClCompile Include="..\..\xdk\util\charset.c" />
+    <ClCompile Include="..\..\xdk\util\compare.c" />
+    <ClCompile Include="..\..\xdk\util\datetime.c" />
+    <ClCompile Include="..\..\xdk\util\numbers.c" />
+    <ClCompile Include="..\..\xdk\util\others.c" />
+    <ClCompile Include="..\..\xdk\util\points.c" />
+    <ClCompile Include="..\..\xdk\util\styles.c" />
+    <ClCompile Include="..\..\xdk\varbytes.c" />
+    <ClCompile Include="..\..\xdk\variant.c" />
+    <ClCompile Include="..\..\xdk\varobj.c" />
+    <ClCompile Include="..\..\xdk\varstr.c" />
+    <ClCompile Include="..\..\xdk\vector.c" />
+    <ClCompile Include="..\..\xdk\windows\_if_async_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_comm_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_cons_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_date_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_error_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_file_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_mbcs_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_memo_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_pipe_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_process_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_random_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_share_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_socket_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_thread_win32.cc" />
+    <ClCompile Include="..\..\xdk\windows\_if_timer_win32.cc" />
+    <ClCompile Include="..\..\xdk\wordstable.c" />
+    <ClCompile Include="..\..\xdk\xdkinf.c" />
+    <ClCompile Include="..\..\xdk\xdkinit.c" />
+    <ClCompile Include="..\..\xdk\zlib\adler32.c" />
+    <ClCompile Include="..\..\xdk\zlib\compress.c" />
+    <ClCompile Include="..\..\xdk\zlib\crc32.c" />
+    <ClCompile Include="..\..\xdk\zlib\deflate.c" />
+    <ClCompile Include="..\..\xdk\zlib\gzclose.c" />
+    <ClCompile Include="..\..\xdk\zlib\gzlib.c" />
+    <ClCompile Include="..\..\xdk\zlib\gzread.c" />
+    <ClCompile Include="..\..\xdk\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\xdk\zlib\infback.c" />
+    <ClCompile Include="..\..\xdk\zlib\inffast.c" />
+    <ClCompile Include="..\..\xdk\zlib\inflate.c" />
+    <ClCompile Include="..\..\xdk\zlib\inftrees.c" />
+    <ClCompile Include="..\..\xdk\zlib\lzf.c" />
+    <ClCompile Include="..\..\xdk\zlib\trees.c" />
+    <ClCompile Include="..\..\xdk\zlib\uncompr.c" />
+    <ClCompile Include="..\..\xdk\zlib\zlibexp.c" />
+    <ClCompile Include="..\..\xdk\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\xdk\acp\acp.h" />
+    <ClInclude Include="..\..\xdk\actable.h" />
+    <ClInclude Include="..\..\xdk\bar\barcode.h" />
+    <ClInclude Include="..\..\xdk\bar\bitstream.h" />
+    <ClInclude Include="..\..\xdk\bar\mask.h" />
+    <ClInclude Include="..\..\xdk\bar\mmask.h" />
+    <ClInclude Include="..\..\xdk\bar\mqrspec.h" />
+    <ClInclude Include="..\..\xdk\bar\qrcode.h" />
+    <ClInclude Include="..\..\xdk\bar\qrencode.h" />
+    <ClInclude Include="..\..\xdk\bar\qrencode_inner.h" />
+    <ClInclude Include="..\..\xdk\bar\qrinput.h" />
+    <ClInclude Include="..\..\xdk\bar\qrspec.h" />
+    <ClInclude Include="..\..\xdk\bar\rscode.h" />
+    <ClInclude Include="..\..\xdk\bar\split.h" />
+    <ClInclude Include="..\..\xdk\base64.h" />
+    <ClInclude Include="..\..\xdk\binatree.h" />
+    <ClInclude Include="..\..\xdk\bioinf.h" />
+    <ClInclude Include="..\..\xdk\bplustree.h" />
+    <ClInclude Include="..\..\xdk\chrdef.h" />
+    <ClInclude Include="..\..\xdk\clrutil.h" />
+    <ClInclude Include="..\..\xdk\crypt\aes.h" />
+    <ClInclude Include="..\..\xdk\crypt\arc.h" />
+    <ClInclude Include="..\..\xdk\crypt\asn1.h" />
+    <ClInclude Include="..\..\xdk\crypt\b64.h" />
+    <ClInclude Include="..\..\xdk\crypt\chacha20.h" />
+    <ClInclude Include="..\..\xdk\crypt\chachapoly.h" />
+    <ClInclude Include="..\..\xdk\crypt\cipher.h" />
+    <ClInclude Include="..\..\xdk\crypt\crc.h" />
+    <ClInclude Include="..\..\xdk\crypt\dbrg_ctr.h" />
+    <ClInclude Include="..\..\xdk\crypt\dbrg_hmac.h" />
+    <ClInclude Include="..\..\xdk\crypt\des.h" />
+    <ClInclude Include="..\..\xdk\crypt\dhm.h" />
+    <ClInclude Include="..\..\xdk\crypt\ecdh.h" />
+    <ClInclude Include="..\..\xdk\crypt\ecdsa.h" />
+    <ClInclude Include="..\..\xdk\crypt\ecp.h" />
+    <ClInclude Include="..\..\xdk\crypt\entropy.h" />
+    <ClInclude Include="..\..\xdk\crypt\entropy_poll.h" />
+    <ClInclude Include="..\..\xdk\crypt\gcm.h" />
+    <ClInclude Include="..\..\xdk\crypt\havege.h" />
+    <ClInclude Include="..\..\xdk\crypt\hkdf.h" />
+    <ClInclude Include="..\..\xdk\crypt\hll.h" />
+    <ClInclude Include="..\..\xdk\crypt\md2.h" />
+    <ClInclude Include="..\..\xdk\crypt\md4.h" />
+    <ClInclude Include="..\..\xdk\crypt\md5.h" />
+    <ClInclude Include="..\..\xdk\crypt\mdwrap.h" />
+    <ClInclude Include="..\..\xdk\crypt\mpi.h" />
+    <ClInclude Include="..\..\xdk\crypt\mpi_asm.h" />
+    <ClInclude Include="..\..\xdk\crypt\mur.h" />
+    <ClInclude Include="..\..\xdk\crypt\oid.h" />
+    <ClInclude Include="..\..\xdk\crypt\pem.h" />
+    <ClInclude Include="..\..\xdk\crypt\pkwrap.h" />
+    <ClInclude Include="..\..\xdk\crypt\poly1305.h" />
+    <ClInclude Include="..\..\xdk\crypt\prf.h" />
+    <ClInclude Include="..\..\xdk\crypt\rand.h" />
+    <ClInclude Include="..\..\xdk\crypt\ripe160.h" />
+    <ClInclude Include="..\..\xdk\crypt\rsa.h" />
+    <ClInclude Include="..\..\xdk\crypt\sha1.h" />
+    <ClInclude Include="..\..\xdk\crypt\sha2.h" />
+    <ClInclude Include="..\..\xdk\crypt\sha4.h" />
+    <ClInclude Include="..\..\xdk\crypt\sip.h" />
+    <ClInclude Include="..\..\xdk\crypt\sm3.h" />
+    <ClInclude Include="..\..\xdk\crypt\timing.h" />
+    <ClInclude Include="..\..\xdk\crypt\x509.h" />
+    <ClInclude Include="..\..\xdk\crypt\x509_crl.h" />
+    <ClInclude Include="..\..\xdk\crypt\x509_crt.h" />
+    <ClInclude Include="..\..\xdk\crypt\x509_csr.h" />
+    <ClInclude Include="..\..\xdk\datdef.h" />
+    <ClInclude Include="..\..\xdk\der.h" />
+    <ClInclude Include="..\..\xdk\dicttable.h" />
+    <ClInclude Include="..\..\xdk\dlink.h" />
+    <ClInclude Include="..\..\xdk\domdef.h" />
+    <ClInclude Include="..\..\xdk\encode.h" />
+    <ClInclude Include="..\..\xdk\endian.h" />
+    <ClInclude Include="..\..\xdk\escape.h" />
+    <ClInclude Include="..\..\xdk\expres.h" />
+    <ClInclude Include="..\..\xdk\filetable.h" />
+    <ClInclude Include="..\..\xdk\fontutil.h" />
+    <ClInclude Include="..\..\xdk\gdiattr.h" />
+    <ClInclude Include="..\..\xdk\gdidef.h" />
+    <ClInclude Include="..\..\xdk\geo\geo.h" />
+    <ClInclude Include="..\..\xdk\gly\glydef.h" />
+    <ClInclude Include="..\..\xdk\gly\ttfdef.h" />
+    <ClInclude Include="..\..\xdk\hashtable.h" />
+    <ClInclude Include="..\..\xdk\img\bmp.h" />
+    <ClInclude Include="..\..\xdk\img\jpg.h" />
+    <ClInclude Include="..\..\xdk\img\pdg.h" />
+    <ClInclude Include="..\..\xdk\img\png.h" />
+    <ClInclude Include="..\..\xdk\conv.h" />
+    <ClInclude Include="..\..\xdk\imp\impassert.h" />
+    <ClInclude Include="..\..\xdk\imp\impasync.h" />
+    <ClInclude Include="..\..\xdk\imp\impblock.h" />
+    <ClInclude Include="..\..\xdk\imp\impcache.h" />
+    <ClInclude Include="..\..\xdk\imp\impcomm.h" />
+    <ClInclude Include="..\..\xdk\imp\impcons.h" />
+    <ClInclude Include="..\..\xdk\imp\impdate.h" />
+    <ClInclude Include="..\..\xdk\imp\imperror.h" />
+    <ClInclude Include="..\..\xdk\imp\impjmp.h" />
+    <ClInclude Include="..\..\xdk\imp\impmbcs.h" />
+    <ClInclude Include="..\..\xdk\imp\impmem.h" />
+    <ClInclude Include="..\..\xdk\imp\imppipe.h" />
+    <ClInclude Include="..\..\xdk\imp\impproc.h" />
+    <ClInclude Include="..\..\xdk\imp\imprandom.h" />
+    <ClInclude Include="..\..\xdk\imp\impshare.h" />
+    <ClInclude Include="..\..\xdk\imp\impsock.h" />
+    <ClInclude Include="..\..\xdk\imp\impthr.h" />
+    <ClInclude Include="..\..\xdk\imp\imptimer.h" />
+    <ClInclude Include="..\..\xdk\imp\impuncf.h" />
+    <ClInclude Include="..\..\xdk\integerarray.h" />
+    <ClInclude Include="..\..\xdk\jpg\jchuff.h" />
+    <ClInclude Include="..\..\xdk\jpg\jconfig.h" />
+    <ClInclude Include="..\..\xdk\jpg\jdct.h" />
+    <ClInclude Include="..\..\xdk\jpg\jdhuff.h" />
+    <ClInclude Include="..\..\xdk\jpg\jerror.h" />
+    <ClInclude Include="..\..\xdk\jpg\jinclude.h" />
+    <ClInclude Include="..\..\xdk\jpg\jmemsys.h" />
+    <ClInclude Include="..\..\xdk\jpg\jmorecfg.h" />
+    <ClInclude Include="..\..\xdk\jpg\jpegint.h" />
+    <ClInclude Include="..\..\xdk\jpg\jpeglib.h" />
+    <ClInclude Include="..\..\xdk\jpg\jversion.h" />
+    <ClInclude Include="..\..\xdk\linear.h" />
+    <ClInclude Include="..\..\xdk\loginf.h" />
+    <ClInclude Include="..\..\xdk\mgc\mdrv.h" />
+    <ClInclude Include="..\..\xdk\mgc\mdev.h" />
+    <ClInclude Include="..\..\xdk\mgc\mdef.h" />
+    <ClInclude Include="..\..\xdk\mgc\mfnt.h" />
+    <ClInclude Include="..\..\xdk\mgc\mgc.h" />
+    <ClInclude Include="..\..\xdk\mgc\mgly.h" />
+    <ClInclude Include="..\..\xdk\mgc\mpix.h" />
+    <ClInclude Include="..\..\xdk\mgc\mpap.h" />
+    <ClInclude Include="..\..\xdk\net\netdef.h" />
+    <ClInclude Include="..\..\xdk\numdef.h" />
+    <ClInclude Include="..\..\xdk\objdef.h" />
+    <ClInclude Include="..\..\xdk\png\pngconf.h" />
+    <ClInclude Include="..\..\xdk\png\pngdebug.h" />
+    <ClInclude Include="..\..\xdk\png\pnginfo.h" />
+    <ClInclude Include="..\..\xdk\png\pnglib.h" />
+    <ClInclude Include="..\..\xdk\png\pnglibconf.h" />
+    <ClInclude Include="..\..\xdk\png\pngpriv.h" />
+    <ClInclude Include="..\..\xdk\png\pngstruct.h" />
+    <ClInclude Include="..\..\xdk\spinlock.h" />
+    <ClInclude Include="..\..\xdk\lua\lapi.h" />
+    <ClInclude Include="..\..\xdk\lua\lauxlib.h" />
+    <ClInclude Include="..\..\xdk\lua\lcode.h" />
+    <ClInclude Include="..\..\xdk\lua\lctype.h" />
+    <ClInclude Include="..\..\xdk\lua\ldebug.h" />
+    <ClInclude Include="..\..\xdk\lua\ldo.h" />
+    <ClInclude Include="..\..\xdk\lua\lfunc.h" />
+    <ClInclude Include="..\..\xdk\lua\lgc.h" />
+    <ClInclude Include="..\..\xdk\lua\ljumptab.h" />
+    <ClInclude Include="..\..\xdk\lua\llex.h" />
+    <ClInclude Include="..\..\xdk\lua\llimits.h" />
+    <ClInclude Include="..\..\xdk\lua\lmem.h" />
+    <ClInclude Include="..\..\xdk\lua\lobject.h" />
+    <ClInclude Include="..\..\xdk\lua\lopcodes.h" />
+    <ClInclude Include="..\..\xdk\lua\lopnames.h" />
+    <ClInclude Include="..\..\xdk\lua\lparser.h" />
+    <ClInclude Include="..\..\xdk\lua\lprefix.h" />
+    <ClInclude Include="..\..\xdk\lua\lstate.h" />
+    <ClInclude Include="..\..\xdk\lua\lstring.h" />
+    <ClInclude Include="..\..\xdk\lua\ltable.h" />
+    <ClInclude Include="..\..\xdk\lua\ltm.h" />
+    <ClInclude Include="..\..\xdk\lua\lua.h" />
+    <ClInclude Include="..\..\xdk\lua\luaconf.h" />
+    <ClInclude Include="..\..\xdk\lua\lualib.h" />
+    <ClInclude Include="..\..\xdk\lua\lundump.h" />
+    <ClInclude Include="..\..\xdk\lua\lvm.h" />
+    <ClInclude Include="..\..\xdk\lua\lzio.h" />
+    <ClInclude Include="..\..\xdk\macro.h" />
+    <ClInclude Include="..\..\xdk\map.h" />
+    <ClInclude Include="..\..\xdk\matrix.h" />
+    <ClInclude Include="..\..\xdk\message.h" />
+    <ClInclude Include="..\..\xdk\money.h" />
+    <ClInclude Include="..\..\xdk\multitree.h" />
+    <ClInclude Include="..\..\xdk\net\httpattr.h" />
+    <ClInclude Include="..\..\xdk\net\netcoap.h" />
+    <ClInclude Include="..\..\xdk\net\netdtls.h" />
+    <ClInclude Include="..\..\xdk\net\netfile.h" />
+    <ClInclude Include="..\..\xdk\net\nethttp.h" />
+    <ClInclude Include="..\..\xdk\net\netmqtt.h" />
+    <ClInclude Include="..\..\xdk\net\netpacs.h" />
+    <ClInclude Include="..\..\xdk\net\netssh.h" />
+    <ClInclude Include="..\..\xdk\net\netssl.h" />
+    <ClInclude Include="..\..\xdk\net\nettcp.h" />
+    <ClInclude Include="..\..\xdk\net\nettftp.h" />
+    <ClInclude Include="..\..\xdk\net\netudp.h" />
+    <ClInclude Include="..\..\xdk\net\oauthattr.h" />
+    <ClInclude Include="..\..\xdk\net\srvhttp.h" />
+    <ClInclude Include="..\..\xdk\net\srvtcp.h" />
+    <ClInclude Include="..\..\xdk\net\srvtimer.h" />
+    <ClInclude Include="..\..\xdk\net\srvudp.h" />
+    <ClInclude Include="..\..\xdk\net\ssldef.h" />
+    <ClInclude Include="..\..\xdk\nmath\Rarith.h" />
+    <ClInclude Include="..\..\xdk\nmath\bessel.h" />
+    <ClInclude Include="..\..\xdk\nmath\dpq.h" />
+    <ClInclude Include="..\..\xdk\nmath\Rmath.h" />
+    <ClInclude Include="..\..\xdk\nuid.h" />
+    <ClInclude Include="..\..\xdk\numericarray.h" />
+    <ClInclude Include="..\..\xdk\optparser.h" />
+    <ClInclude Include="..\..\xdk\prim.h" />
+    <ClInclude Include="..\..\xdk\queue.h" />
+    <ClInclude Include="..\..\xdk\set.h" />
+    <ClInclude Include="..\..\xdk\solarterms.h" />
+    <ClInclude Include="..\..\xdk\sort.h" />
+    <ClInclude Include="..\..\xdk\stacktable.h" />
+    <ClInclude Include="..\..\xdk\str.h" />
+    <ClInclude Include="..\..\xdk\stream.h" />
+    <ClInclude Include="..\..\xdk\stringarray.h" />
+    <ClInclude Include="..\..\xdk\stringtable.h" />
+    <ClInclude Include="..\..\xdk\strutil.h" />
+    <ClInclude Include="..\..\xdk\tdb\hkv.h" />
+    <ClInclude Include="..\..\xdk\tdb\tdef.h" />
+    <ClInclude Include="..\..\xdk\tdb\tdb.h" />
+    <ClInclude Include="..\..\xdk\tdb\tkv.h" />
+    <ClInclude Include="..\..\xdk\trietree.h" />
+    <ClInclude Include="..\..\xdk\util\charset.h" />
+    <ClInclude Include="..\..\xdk\util\compare.h" />
+    <ClInclude Include="..\..\xdk\util\datetime.h" />
+    <ClInclude Include="..\..\xdk\util\numbers.h" />
+    <ClInclude Include="..\..\xdk\util\others.h" />
+    <ClInclude Include="..\..\xdk\util\points.h" />
+    <ClInclude Include="..\..\xdk\util\styles.h" />
+    <ClInclude Include="..\..\xdk\varbytes.h" />
+    <ClInclude Include="..\..\xdk\variant.h" />
+    <ClInclude Include="..\..\xdk\varobj.h" />
+    <ClInclude Include="..\..\xdk\varstr.h" />
+    <ClInclude Include="..\..\xdk\vector.h" />
+    <ClInclude Include="..\..\xdk\windows\_xdk_win.h" />
+    <ClInclude Include="..\..\xdk\wordstable.h" />
+    <ClInclude Include="..\..\xdk\xdkdef.h" />
+    <ClInclude Include="..\..\xdk\xdkimg.h" />
+    <ClInclude Include="..\..\xdk\xdkimp.h" />
+    <ClInclude Include="..\..\xdk\xdkmgc.h" />
+    <ClInclude Include="..\..\xdk\xdkstd.h" />
+    <ClInclude Include="..\..\xdk\xdkloc.h" />
+    <ClInclude Include="..\..\xdk\xdkinf.h" />
+    <ClInclude Include="..\..\xdk\xdkinit.h" />
+    <ClInclude Include="..\..\xdk\xdklua.h" />
+    <ClInclude Include="..\..\xdk\xdknet.h" />
+    <ClInclude Include="..\..\xdk\xdkoem.h" />
+    <ClInclude Include="..\..\xdk\xdktdb.h" />
+    <ClInclude Include="..\..\xdk\xdkutil.h" />
+    <ClInclude Include="..\..\xdk\zlib\crc32.h" />
+    <ClInclude Include="..\..\xdk\zlib\deflate.h" />
+    <ClInclude Include="..\..\xdk\zlib\gzguts.h" />
+    <ClInclude Include="..\..\xdk\zlib\inffast.h" />
+    <ClInclude Include="..\..\xdk\zlib\inffixed.h" />
+    <ClInclude Include="..\..\xdk\zlib\inflate.h" />
+    <ClInclude Include="..\..\xdk\zlib\inftrees.h" />
+    <ClInclude Include="..\..\xdk\zlib\lzf.h" />
+    <ClInclude Include="..\..\xdk\zlib\trees.h" />
+    <ClInclude Include="..\..\xdk\zlib\zconf.h" />
+    <ClInclude Include="..\..\xdk\zlib\zlib.h" />
+    <ClInclude Include="..\..\xdk\zlib\zlibexp.h" />
+    <ClInclude Include="..\..\xdk\zlib\zutil.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

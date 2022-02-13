@@ -1,0 +1,2178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\windows">
+      <UniqueIdentifier>{168a0c2d-22f2-4ea3-88e3-039b166d73c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\windows">
+      <UniqueIdentifier>{b8f3a8f3-52ce-4e71-a68e-a38b7f691612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\imp">
+      <UniqueIdentifier>{1eb84ed0-3e8e-4e87-b91c-358b214c05ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imp">
+      <UniqueIdentifier>{a4776e6b-d3fa-4bcf-817a-69d317f97143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\zlib">
+      <UniqueIdentifier>{a2f7c50e-47fb-4766-a370-e0e5625357bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zlib">
+      <UniqueIdentifier>{5a960abd-9b05-4d5e-8229-02862cbdf17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\geo">
+      <UniqueIdentifier>{72a44cd1-0a5c-422c-9e27-c7d59b6ddce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\geo">
+      <UniqueIdentifier>{866ec013-80b4-475a-833c-7c1b0cc6abc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\crypt">
+      <UniqueIdentifier>{7f89329b-b6fd-4ee9-be7a-f87882ddbd86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\crypt">
+      <UniqueIdentifier>{acf0b1cf-1b64-486b-afbd-803c35602e1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\net">
+      <UniqueIdentifier>{113ed648-a9ae-48bb-a7ee-d25ca8566341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net">
+      <UniqueIdentifier>{41a12e75-6577-44d5-9f3c-0eeb10988d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\img">
+      <UniqueIdentifier>{a8884152-7057-45f5-84a3-ee3fd55d68de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\img">
+      <UniqueIdentifier>{5b0bfd35-5d58-4f7c-8e2f-22845d8ea543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\nmath">
+      <UniqueIdentifier>{40dedabb-e4f1-4f49-a93a-8989bd00b0e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\nmath">
+      <UniqueIdentifier>{9e0b205e-b739-4c3f-8e5f-1b91fb8ecc37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\lua">
+      <UniqueIdentifier>{01a795ea-e114-4d1a-b96b-0049c11dfe70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\lua">
+      <UniqueIdentifier>{30701a1e-8bec-4573-89e0-b7bc084eb091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tdb">
+      <UniqueIdentifier>{77663324-43d5-4120-bae4-a412bbee3297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tdb">
+      <UniqueIdentifier>{d2729f57-c4a6-413d-a5ba-31a8f9f0d618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\acp">
+      <UniqueIdentifier>{07fac5b6-a9d0-4252-8596-46519571b1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\acp">
+      <UniqueIdentifier>{8813369e-0fc7-4da0-862b-fcd4e8a44ed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\util">
+      <UniqueIdentifier>{a3e3dc28-3f79-4bdc-ab6d-1ab602e68bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\util">
+      <UniqueIdentifier>{bafc783d-c791-447c-b82e-8a62e85cd33e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\mgc">
+      <UniqueIdentifier>{802c4ecc-5e3d-479a-9a89-139242afd4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mgc">
+      <UniqueIdentifier>{b2cddbde-d638-4c2d-8619-f584626688e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\png">
+      <UniqueIdentifier>{27c07942-66bd-4f4b-bed3-bffa410da961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\jpg">
+      <UniqueIdentifier>{0e0f578f-4e5e-41c9-98ac-b0cb1a47e5a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\png">
+      <UniqueIdentifier>{4e0f4e8e-f26e-483c-b46d-2b85a4f19f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\jpg">
+      <UniqueIdentifier>{6d0f65ac-f7bb-4cc8-bb33-75b756403a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\gly">
+      <UniqueIdentifier>{d0f5bb2c-e99c-457c-b887-d13ca0439cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\gly">
+      <UniqueIdentifier>{651a2b11-ff33-411b-a87e-5d8d1c391461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\bar">
+      <UniqueIdentifier>{ae08f640-7d0e-4d07-ba83-dffa1ad4f105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\bar">
+      <UniqueIdentifier>{3a2f8a81-a309-459a-bd49-f16bf159ede6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\xdk\windows\_if_cons_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_date_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_error_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_file_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_mbcs_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_memo_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_pipe_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_process_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_share_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_socket_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_thread_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_timer_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\xdkinf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_comm_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_async_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\xdkinit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\dlink.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impassert.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impasync.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impcache.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impcomm.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impcons.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impdate.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impjmp.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impmbcs.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impmem.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\imppipe.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impproc.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impshare.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impsock.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impthr.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\imptimer.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impuncf.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\str.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\strutil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\clrutil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\fontutil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\adler32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\compress.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\crc32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\deflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\gzclose.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\gzlib.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\gzread.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\gzwrite.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\infback.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\inffast.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\inflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\inftrees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\trees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\uncompr.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\zutil.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\geo\geo.c">
+      <Filter>源文件\geo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\aes.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\arc.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\asn1.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\cipher.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\dbrg_ctr.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\dbrg_hmac.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\des.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\dhm.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\ecdh.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\ecdsa.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\ecp.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\ecp_test.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\gcm.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\havege.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\md2.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\md4.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\md5.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\mpi.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\oid.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\pem.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\pkwrap.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\ripe160.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\rsa.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\rsa_test.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sha1.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sha2.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sha4.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\timing.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\x509.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\x509_crl.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\x509_crt.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\x509_csr.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\x509_test.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\b64.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\mdwrap.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\actable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\binatree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bplustree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\dicttable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\escape.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\expres.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\filetable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\hashtable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\integerarray.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\linear.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\macro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\matrix.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\message.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\multitree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nuid.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\numericarray.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\optparser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\prim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\set.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\stacktable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\stringarray.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\stringtable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\trietree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\varbytes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\variant.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\varobj.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\varstr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\vector.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\wordstable.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\map.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\zlibexp.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bioinf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\stream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netcoap.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netdtls.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netdtls10.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netdtls12.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netfile.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nethttp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netmqtt.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netssh.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netssl.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netssl30.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettcp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettftp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettls10.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettls11.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettls12.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netudp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\srvhttp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\srvtcp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\srvudp.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\der.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\nettls13.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\windows\_if_random_win32.cc">
+      <Filter>源文件\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\imprandom.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\hkdf.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\prf.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\chacha20.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\poly1305.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\chachapoly.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\entropy.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\entropy_poll.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\rand.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\base64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\img\pdg.c">
+      <Filter>源文件\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\img\jpg.c">
+      <Filter>源文件\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\img\bmp.c">
+      <Filter>源文件\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sip.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\mur.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\hll.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\crc.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\zlib\lzf.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\imperror.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\bessel_i.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\bd0.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\bessel_j.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\bessel_k.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\bessel_y.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\beta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\chebyshev.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\choose.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\cospi.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\d1mach.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dcauchy.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dexp.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\df.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dgamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dgeom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dhyper.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dlnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dlogis.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dnt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dpois.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dunif.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\dweibull.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\expm1.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\fmax2.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\fmin2.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\fprec.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\fround.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\fsign.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\ftrunc.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\gamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\gamma_cody.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\gammalims.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\i1mach.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\imax2.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\imin2.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\lbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\lgamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\lgammacor.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\log1p.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pcauchy.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pexp.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pgamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pgeom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\phyper.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\plnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\plogis.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pnt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\polygamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\ppois.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\ptukey.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\punif.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\pweibull.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qcauchy.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qexp.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qgamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qgeom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qhyper.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qlnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qlogis.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qnt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qpois.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qtukey.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qunif.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\qweibull.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rbeta.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rcauchy.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rexp.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rf.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rgamma.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rgeom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rhyper.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rlnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rlogis.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rmultinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rnbinom.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rnchisq.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rnorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rpois.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rt.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\runif.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\rweibull.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\sexp.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\sign.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\signrank.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\snorm.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\stirlerr.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\toms708.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\wilcox.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\arith.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\times.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\nmath\sunif.c">
+      <Filter>源文件\nmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lapi.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lauxlib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lbaselib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lcode.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lcorolib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lctype.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ldblib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ldebug.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ldo.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ldump.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lfunc.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lgc.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\linit.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\liolib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\llex.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lmathlib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lmem.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\loadlib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lobject.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lopcodes.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\loslib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lparser.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lstate.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lstring.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lstrlib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ltable.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ltablib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\ltm.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lua.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lundump.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lutf8lib.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lvm.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\lzio.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\lua\luac.c">
+      <Filter>源文件\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\net\netpacs.c">
+      <Filter>源文件\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\tdb\tkv.c">
+      <Filter>源文件\tdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\acp\acp_utf8.c">
+      <Filter>源文件\acp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\tdb\tdb.c">
+      <Filter>源文件\tdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\tdb\hkv.c">
+      <Filter>源文件\tdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\solarterms.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\money.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\spinlock.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\imp\impblock.c">
+      <Filter>源文件\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\charset.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\datetime.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\compare.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\points.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\styles.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\others.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\util\numbers.c">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdev_bitmap.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_mono.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcapimin.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcapistd.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jccoefct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jccolor.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcdctmgr.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jchuff.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcinit.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcmainct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcmarker.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcmaster.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcomapi.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcparam.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcphuff.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcprepct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jcsample.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jctrans.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdapimin.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdapistd.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdatadst.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdatasrc.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdcoefct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdcolor.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jddctmgr.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdhuff.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdinput.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdmainct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdmarker.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdmaster.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdmerge.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdphuff.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdpostct.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdsample.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jdtrans.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jerror.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jfdctflt.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jfdctfst.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jfdctint.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jidctflt.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jidctfst.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jidctint.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jidctred.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jmemmgr.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jmemnobs.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jquant1.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jquant2.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\jpg\jutils.c">
+      <Filter>源文件\jpg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngerror.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngget.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngmem.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngpread.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngread.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngrio.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngrtran.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngrutil.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngset.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngtrans.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngwio.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngwrite.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngwtran.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pngwutil.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\img\png.c">
+      <Filter>源文件\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\png\pnglib.c">
+      <Filter>源文件\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_gray.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_raster.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color16.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color24.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mdrv_color32.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\acp\acp_help.c">
+      <Filter>源文件\acp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\conv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\acp\acp_gb2312.c">
+      <Filter>源文件\acp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\acp\acp_table.c">
+      <Filter>源文件\acp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mfnt_fixed.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sm3.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mem_gc.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mem_pixmap.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mem_paper.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\mgc\mgly_fixed.c">
+      <Filter>源文件\mgc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\gly\gly_pattern.c">
+      <Filter>源文件\gly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\gly\ttf_loader.c">
+      <Filter>源文件\gly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\gly\gly_loader.c">
+      <Filter>源文件\gly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\gly\gly_finder.c">
+      <Filter>源文件\gly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\barcode.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\bitstream.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\mask.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\mmask.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\mqrspec.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\qrcode.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\qrencode.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\qrinput.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\qrspec.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\rscode.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\bar\split.c">
+      <Filter>源文件\bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\xdk\acp\acp_share.c">
+      <Filter>源文件\acp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\xdk\windows\_xdk_win.h">
+      <Filter>头文件\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkinf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkinit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\dlink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impassert.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impasync.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impcache.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impcomm.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impcons.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impdate.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impjmp.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impmbcs.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impmem.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\imppipe.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impproc.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impshare.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impsock.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impthr.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\imptimer.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impuncf.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\str.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkimp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\strutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\clrutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gdiattr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\fontutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\zutil.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\zlib.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\zconf.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\trees.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\inftrees.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\inflate.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\inffixed.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\inffast.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\gzguts.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\deflate.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\crc32.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\geo\geo.h">
+      <Filter>头文件\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\x509_csr.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\x509_crt.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\x509_crl.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\x509.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\timing.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sha4.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sha2.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sha1.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\rsa.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\ripe160.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\pkwrap.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\pem.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\oid.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\mpi_asm.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\mpi.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\md5.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\md4.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\md2.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\havege.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\gcm.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\ecp.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\ecdsa.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\ecdh.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\dhm.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\des.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\dbrg_hmac.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\dbrg_ctr.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\cipher.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\asn1.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\arc.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\aes.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\b64.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\actable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\binatree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bplustree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\dicttable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\escape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\expres.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\filetable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\hashtable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\integerarray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\linear.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\multitree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\nuid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\numericarray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\optparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\prim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\set.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\stacktable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\stringarray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\stringtable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\trietree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\varbytes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\variant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\varobj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\varstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\wordstable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkoem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\zlibexp.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bioinf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\ssldef.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\srvudp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\srvtimer.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\srvtcp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\srvhttp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\oauthattr.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netudp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\nettftp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\nettcp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netssl.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netssh.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netmqtt.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\nethttp.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netfile.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netdtls.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netcoap.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\httpattr.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdknet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\der.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\mdwrap.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\imprandom.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\hkdf.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\prf.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\chacha20.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\poly1305.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\chachapoly.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\entropy_poll.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\entropy.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\rand.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\crc.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\hll.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\mur.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sip.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\base64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\zlib\lzf.h">
+      <Filter>头文件\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\img\pdg.h">
+      <Filter>头文件\img</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\img\jpg.h">
+      <Filter>头文件\img</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\img\bmp.h">
+      <Filter>头文件\img</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\imperror.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\nmath\Rmath.h">
+      <Filter>头文件\nmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\nmath\bessel.h">
+      <Filter>头文件\nmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\nmath\dpq.h">
+      <Filter>头文件\nmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\nmath\Rarith.h">
+      <Filter>头文件\nmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lzio.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lvm.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lundump.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lualib.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\luaconf.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lua.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\ltm.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\ltable.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lstring.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lstate.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lprefix.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lparser.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lopnames.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lopcodes.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lobject.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lmem.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\llimits.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\llex.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\ljumptab.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lgc.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lfunc.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\ldo.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\ldebug.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lctype.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lcode.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lauxlib.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\lua\lapi.h">
+      <Filter>头文件\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdklua.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netpacs.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\tdb\tdef.h">
+      <Filter>头文件\tdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\tdb\tkv.h">
+      <Filter>头文件\tdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkstd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\tdb\tdb.h">
+      <Filter>头文件\tdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\tdb\hkv.h">
+      <Filter>头文件\tdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdktdb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\solarterms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\money.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\spinlock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\imp\impblock.h">
+      <Filter>头文件\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\charset.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\datetime.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\compare.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\points.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\styles.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\others.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\util\numbers.h">
+      <Filter>头文件\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mdef.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mdrv.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mdev.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mgc.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkmgc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jchuff.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jconfig.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jdct.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jdhuff.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jerror.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jinclude.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jmemsys.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jmorecfg.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jpegint.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jpeglib.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\jpg\jversion.h">
+      <Filter>头文件\jpg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pngconf.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pngdebug.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pnginfo.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pnglibconf.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pngpriv.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pngstruct.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\img\png.h">
+      <Filter>头文件\img</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\png\pnglib.h">
+      <Filter>头文件\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\xdkimg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mpix.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mfnt.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\conv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\acp\acp.h">
+      <Filter>头文件\acp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sm3.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mpap.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gly\glydef.h">
+      <Filter>头文件\gly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gly\ttfdef.h">
+      <Filter>头文件\gly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\mgc\mgly.h">
+      <Filter>头文件\mgc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\datdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\endian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\barcode.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\bitstream.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\mask.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\mmask.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\mqrspec.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\qrcode.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\qrencode.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\qrencode_inner.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\qrinput.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\qrspec.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\rscode.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\bar\split.h">
+      <Filter>头文件\bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\encode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\numdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\chrdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\objdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\domdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\loginf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\net\netdef.h">
+      <Filter>头文件\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gdidef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

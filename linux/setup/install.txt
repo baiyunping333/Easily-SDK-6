@@ -1,0 +1,56 @@
+[SQL SERVER]
+download: 
+unixODBC-2.3.9.tar.gz --http://www.unixodbc.org
+
+install:
+# tar vxzf unixODBC-2.3.9.tar.gz
+# cd unixODBC-2.3.9
+# CPPFLAGS="-DSIZEOF_LONG_INT=8" 
+# export CPPFLAGS
+# ./configure --prefix=/usr --libdir=/usr/lib --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE
+# make
+# make install
+
+# odbcinst -j
+
+# sudo ldconfig
+
+# sudo vi /etc/odbcinst.ini
+
+[SQL Server]
+Description = ODBC Driver For SQL Server
+
+Driver = /usr/lib/libmsodbcsql-13.so
+
+Setup = /usr/lib/libmsodbcsql-13.so
+
+FileUsage = 1
+
+# odbcinst -q -d -n "SQL Server"
+
+[OCI]
+# sudo cp -rf $(setup)/oracle /usr/local
+
+# sudo vi .bash_profile
+
+export ORACLE_HOME=/usr/local/oracle/instantclient10_2
+export TNS_ADMIN=$ORACLE_HOME/network/admin
+export NLS_LANG=SIMPLIFIED_CHINESE_CHINA.ALUTF8
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export SQLPATH=$ORACLE_HOME
+export PATH=$ORACLE_HOME:$PATH
+unset no_proxy
+unset NLS_LANG
+
+# source .bash_profile
+
+# sudo ln -bs /usr/local/oracle/instantclient10_1/libclntsh.so.10.1 /usr/local/lib/libclntsh.so
+
+# sudo ln -bs /usr/local/oracle/instantclient10_1/libocci.so.10.1 /usr/local/lib/libocci.so
+
+[Postgres]
+# sudo apt-get install postgresql-client
+# sudo apt-get install libpq-dev
+
+[mysql]
+# sudo apt-get install mysql-client

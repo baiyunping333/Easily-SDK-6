@@ -1,0 +1,611 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en.us">
+  <head>
+    <title>
+      SQL*Plus Instant Client Release Notes
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta content="Default" name="Page">
+    <meta content="SQL*Plus Instant Client Release Notes" name="Title">
+  </head>
+  <body bgcolor="#ffffff">
+    <table cellspacing="0" cellpadding="0" width="100%" summary="layout">
+      <tbody>
+        <tr>
+          <td valign="top" align="left">
+            <font face="Helvetica, Arial, sans-serif" color="#330099"><strong>SQL*Plus Instant Client Release Notes<br>
+            Release 10.1</strong></font>
+          </td>
+          <td valign="bottom" align="right" width="144">
+            <table cellspacing="0" cellpadding="0" width="100%" summary="layout">
+              <tbody>
+                <tr>
+                  <td valign="top" align="middle" width="25%">
+                  </td>
+                  <td valign="top" align="middle" width="25%">
+                  </td>
+                  <td valign="top" align="middle" width="25%">
+                  </td>
+                  <td valign="top" align="middle" width="25%">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <p>
+      <a name="BEGIN"></a>
+    </p>
+    <div class="IND">
+      <!-- End Header --><a name="741061"></a>
+      <h1 class="ProductTitle">
+        <font face="Arial, Helvetica, sans-serif">SQL*Plus Instant Client</font>
+      </h1>
+      <p>
+        <a name="743497"></a><span class="BookTitle"><font face="Arial, Helvetica, sans-serif">Release Notes</font></span>
+      </p>
+      <p>
+        <a name="998710"></a><span class="VersionNumber"><font face="Arial, Helvetica, sans-serif">Release 10.1</font></span>
+      </p>
+      <a name="1016864"></a>
+      <p class="PrintDate">
+        <font face="Arial, Helvetica, sans-serif" size="-1">January 2005</font>
+      </p>
+      <a name="1016872"></a>
+      <div class="IND">
+        <h2 class="H2">
+          <font face="Arial, Helvetica, sans-serif" color="#330099"><a name="SQLPlusInstantClient"></a>1 SQL*Plus Instant Client</font>
+        </h2>
+        <p class="BP">
+          SQL*Plus Instant Client offers all the functionality of SQL*Plus command-line, without the need for a traditional ORACLE_HOME installation. SQL*Plus Instant Client is easy to install, and uses significantly less disk space.
+        </p>
+        <p>
+          SQL*Plus Instant Client is available on platforms that support the OCI Instant Client. See the <i>Oracle Call Interface Programmer's Guide</i> for more information on the OCI Instant Client.
+        </p>
+        <p>
+          SQL*Plus Instant Client does not include a database.
+        </p>
+        <h3 class="H3">
+          <font face="Arial, Helvetica, sans-serif" color="#330099">1.1 Installing SQL*Plus Instant Client</font>
+        </h3>
+        <p>
+          SQL*Plus Instant Client 10.1 can be downloaded from the Oracle Technology Network (OTN) or installed from the Oracle Database 10<i>g</i> Client Release CD.
+        </p>
+      </div>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.1.1 OTN Download</font>
+      </h4>
+      <div class="IND">
+        <p>
+          Download matching versions, i.e. 10.1.0.4, of the Basic Instant Client and SQL*Plus Instant Client packages from the <a href="http://www.oracle.com/technology/tech/oci/instantclient/instantclient.html">OTN Instant Client page</a>.
+        </p>
+        <p>
+          On Linux, use rpm&nbsp;-i for the initial install of the RPM packages, or rpm&nbsp;-u to upgrade to a newer version of the packages.
+        </p>
+        <p>
+          On other platforms the two packages should be unzipped into one directory, for example, /home/instantclient10_1 on UNIX or c:\instantclient10_1 on Windows. This table shows the Oracle client-side files required to deploy SQL*Plus Instant Client 10.1.
+        </p>
+        <table width="90%" summary="Files needed to run SQL*Plus Instant Client" border="1">
+          <tbody>
+            <tr>
+              <td valign="top" colspan="2">
+                <p align="center">
+                  <b>Platform</b>
+                </p>
+              </td>
+              <td rowspan="2">
+                <b>Description</b>
+              </td>
+              <td rowspan="2">
+                <b>Package</b>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>UNIX/Linux</b>
+              </td>
+              <td>
+                <b>Windows</b>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                sqlplus
+              </td>
+              <td>
+                sqlplus.exe
+              </td>
+              <td>
+                SQL*Plus executable
+              </td>
+              <td rowspan="3">
+                SQL*Plus
+              </td>
+            </tr>
+            <tr>
+              <td>
+                libsqlplus.so
+              </td>
+              <td>
+                not applicable
+              </td>
+              <td>
+                SQL*Plus library
+              </td>
+            </tr>
+            <tr>
+              <td>
+                glogin.sql
+              </td>
+              <td>
+                glogin.sql
+              </td>
+              <td>
+                SQL*Plus site profile
+              </td>
+            </tr>
+            <tr>
+              <td>
+                libclntsh.so.10.1
+              </td>
+              <td>
+                oci.dll
+              </td>
+              <td>
+                Client code library
+              </td>
+              <td rowspan="3">
+                Basic
+              </td>
+            </tr>
+            <tr>
+              <td height="24">
+                libociei.so
+              </td>
+              <td height="24">
+                oraociei10.dll
+              </td>
+              <td height="24">
+                OCI Instant Client data shared library
+              </td>
+            </tr>
+            <tr>
+              <td>
+                libnnz10.so
+              </td>
+              <td>
+                orannzsbb10.dll
+              </td>
+              <td>
+                Security library
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="IND">
+          <p>
+            Files included in the Basic package which are not listed may be ignored or can be removed to save disk space.
+          </p>
+        </div>
+        <div class="IND">
+          <p>
+            The SQL*Plus Instant Client package should never be installed on an ORACLE_HOME.
+          </p>
+        </div>
+      </div>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.1.2 Client Release CD Install</font>
+      </h4>
+      <div class="IND">
+        <p>
+          Run the installer on the Oracle Database 10<i>g</i> Client CD and choose the Administrator option. After the installation completes, create a new directory and copy the SQL*Plus and OCI Instant Client files to it. All libraries must be copied from the same ORACLE_HOME into one directory.
+          For example /home/instantclient10_1 on UNIX and Linux, or c:\instantclient10_1 on Windows.
+        </p>
+      </div>
+      <div class="IND">
+        On UNIX and Linux copy these files:
+      </div>
+      <blockquote>
+        <div class="IND">
+<pre>
+$ORACLE_HOME/instantclient/libociei.so
+$ORACLE_HOME/lib/libclntsh.so.10.1
+$ORACLE_HOME/lib/libnnz10.so
+$ORACLE_HOME/lib/libsqlplus.so
+$ORACLE_HOME/bin/sqlplus
+$ORACLE_HOME/sqlplus/admin/glogin.sql
+</pre>
+        </div>
+      </blockquote>
+      <div class="IND">
+        On Windows copy these files:
+      </div>
+      <blockquote>
+        <div class="IND">
+<pre>
+%ORACLE_HOME%\instantclient\oraociei10.dll
+%ORACLE_HOME%\bin\oci.dll
+%ORACLE_HOME%\bin\orannzsbb10.dll
+%ORACLE_HOME%\bin\sqlplus.exe
+%ORACLE_HOME%\sqlplus\admin\glogin.sql
+</pre>
+        </div>
+      </blockquote>
+      <h3 class="H3">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.2 Configuring the SQL*Plus Instant Client</font>
+      </h3>
+      <div class="IND">
+        <p>
+          After the required files are installed, the environment
+needs to be configured.
+        </p>
+      </div>
+
+        <div class="IND">
+          <p>
+            The SQL*Plus Instant Client executable should only be used with the matching version of the Basic Instant Client.
+          </p>
+        </div>
+
+      <div class="IND">
+        <p>
+          Note that no ORACLE_HOME or ORACLE_SID environment variables need to be set.
+        </p>
+      </div>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.2.1 Linux (Installed from the RPMs) Configuration</font>
+      </h4>
+                <div class="IND"> <p> The RPMs install into Oracle
+specific sub-directories in the /usr file system.  The sub-directory
+structure enables multiple versions of Instant Client to be
+available. </p> </div>
+
+      <ol>
+                <li>
+          <div class="IND">
+            Add the name of the directory containing the Instant Client libraries to LD_LIBRARY_PATH. Remove any other Oracle directories.
+          </div>
+          <div class="IND">
+            <p>For example on Solaris in the Bourne or Korn shells:</p>
+          </div>
+          <blockquote>
+<pre>
+LD_LIBRARY_PATH= /usr/lib/oracle/10.1.0.4/client/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+</pre>
+          </blockquote>
+        </li>
+
+        <li>
+          <div class="IND">
+            <p>Make sure the <i>sqlplus</i> executable installed from the RPM is found first in your PATH. To test, enter "which sqlplus", which should return /usr/bin/sqlplus. If not, remove any other Oracle directories from PATH, or put /usr/bin before other SQL*Plus executables in the PATH, or use
+            an absolute or relative path to start SQL*Plus.</p>
+          <p>For example to set the path in the bash shell:</p>
+          </div>
+          <blockquote>
+<pre>
+PATH=/usr/bin:${PATH}
+export PATH
+</pre>
+          </blockquote>
+          <div class="IND">
+          <p>If you install multiple versions of SQL*Plus, you
+may need to change the symbolic link /usr/bin/sqlplus to the
+ version of SQL*Plus matching the libraries in LD_LIBRARY_PATH.  For
+10.1.0.4, /usr/bin/sqlplus is a symbolic link to the SQL*Plus binary at
+/usr/lib/oracle/10.1.0.4/client/bin/sqlplus.</p>
+          </div>
+        </li>
+        <li>
+          <div class="IND">
+            <p>Set SQLPATH to the directory containing <i>glogin.sql</i>.</p>
+            <p>For example:</p>
+          </div>
+          <blockquote>
+<pre>
+SQLPATH=/usr/lib/oracle/10.1.0.4/client/lib:${SQLPATH}
+export SQLPATH
+</pre>
+          </blockquote>
+        </li>
+        <li>
+          <div class="IND">
+            <p>Set Oracle globalization variables required for your locale. A default locale will be assumed if no variables are set. See the <i>Oracle Database Globalization Support Guide</i> for more information.</p>
+            <p>For example to set NLS_LANG for a Japanese environment:</p>
+          </div>
+          <blockquote>
+<pre>
+NLS_LANG=JAPANESE_JAPAN.JA16EUC
+export NLS_LANG
+</pre>
+          </blockquote>
+        </li>
+      </ol>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.2.2 Linux (Installed from the Client Release CD) and UNIX Configuration</font>
+      </h4>
+
+      <ol>
+        <li>
+          <div class="IND">
+            Add the name of the directory containing the Instant Client files to the appropriate shared library path LD_LIBRARY_PATH, LIBPATH or SHLIB_PATH. Remove any other Oracle directories.
+          </div>
+          <div class="IND">
+            For example on Solaris in the Bourne or Korn shells:
+          </div>
+          <blockquote>
+<pre>
+LD_LIBRARY_PATH=/home/instantclient10_1:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+</pre>
+          </blockquote>
+        </li>
+        <li>
+          <div class="IND">
+            Add the directory containing the Instant Client files to the PATH environment variable. If it is not set, then an absolute or relative path must be used to start SQL*Plus. Remove any other Oracle directories from PATH.
+          </div>
+          <div class="IND">
+            For example:
+          </div>
+          <blockquote>
+<pre>
+PATH=/home/instantclient10_1:${PATH}
+export PATH
+</pre>
+          </blockquote>
+        </li>
+        <li>
+          <div class="IND">
+            Set SQLPATH to the directory containing the Instant Client files so <i>glogin.sql</i> can be found.
+          </div>
+          <div class="IND">
+            For example:
+          </div>
+          <blockquote>
+<pre>
+SQLPATH=/home/instantclient10_1:${SQLPATH}
+export SQLPATH
+</pre>
+          </blockquote>
+        </li>
+        <li>
+          <div class="IND">
+            Set Oracle globalization variables required for your locale. A default locale will be assumed if no variables are set. See the <i>Oracle Database Globalization Support Guide</i> for more information.
+          </div>
+          <div class="IND">
+            For example to set NLS_LANG for a Japanese environment:
+          </div>
+          <blockquote>
+<pre>
+NLS_LANG=JAPANESE_JAPAN.JA16EUC
+export NLS_LANG
+</pre>
+          </blockquote>
+        </li>
+      </ol>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.2.3 Windows Configuration</font>
+      </h4>
+      <p>
+        The environment may be configured using SET commands in a Windows command prompt or made permanent by setting the Environment Variables in the System Properties.
+      </p>
+      <p>
+        For example, to set environment variables in Windows 2000 using System Properties, open System from the Control Panel, click the Advanced tab and then click Environment Variables.
+      </p>
+      <ol>
+        <li>
+          <div class="IND">
+            <p>
+              Add the directory containing the Instant Client files to the PATH system environment variable. Remove any other Oracle directories from PATH.
+            </p>
+          </div>
+          <div class="IND">
+            <p>
+              For example add c:\instantclient10_1 to the beginning of the PATH.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="IND">
+            Set the user environment variable SQLPATH to the directory containing the Instant Client files so <i>glogin.sql</i> is found.
+          </div>
+          <div class="IND">
+            <p>
+              For example create a user variable SQLPATH set to c:\instantclient10_1
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="IND">
+            Set Oracle globalization variables required for your locale. A default locale will be assumed if no variables are set. See the <i>Oracle Database Globalization Support Guide</i> for more information.
+          </div>
+          <div class="IND">
+            <p>
+              For example, to set NLS_LANG for a Japanese environment, create a user environment variable NLS_LANG set to JAPANESE_JAPAN.JA16EUC.
+            </p>
+          </div>
+        </li>
+      </ol>
+      <h3 class="H3">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.3 Connecting to a Database with SQL*Plus Instant Client</font>
+      </h3>
+      SQL*Plus Instant Client is always 'remote' from any database server. To connect to a database you must specify the database using an Oracle Net connection identifier.
+      <p>
+        An example using an Easy Connection identifier to connect to the HR schema in the MYDB database running on <i>mymachine</i> is:
+      </p>
+      <blockquote>
+<pre>
+sqlplus hr@//<i>mymachine</i>.<i>mydomain</i>:<i>port</i>/MYDB
+</pre>
+      </blockquote>
+      <p>
+        Alternatively you can use a Net Service Name:
+      </p>
+      <blockquote>
+<pre>
+sqlplus hr@MYDB
+</pre>
+      </blockquote>
+      <p>
+        Net Service Names can be stored in a number of places, including LDAP. The use of LDAP is recommended to take advantage of the new features of Oracle Database 10<i>g</i>. See the <i>Oracle Database Net Services Reference Guide</i> for more information.
+      </p>
+      <p>
+        If you want to use Net Service Names configured in a local Oracle Net <i>tnsnames.ora</i> file, then set the environment variable TNS_ADMIN to the directory containing the <i>tnsnames.ora</i> file. For example, on UNIX, if your <i>tnsnames.ora</i> file is in <i>/home/user1</i> and it
+        defines the Net Service Name MYDB2:
+      </p>
+      <blockquote>
+<pre>
+TNS_ADMIN=/home/user1
+export TNS_ADMIN
+sqlplus hr@MYDB2
+</pre>
+      </blockquote>
+      <p>
+        If TNS_ADMIN is not set, then an operating system dependent set of directories is examined to find <i>tnsnames.ora</i>. This search path includes looking in the directory specified by the ORACLE_HOME environment variable for <i>network/admin/tnsnames.ora</i>. This is the only reason to set
+        the ORACLE_HOME environment variable for SQL*Plus Instant Client. If ORACLE_HOME is set when running Instant Client applications, it must be set to a directory that exists.
+      </p>
+      <p>
+        This example assumes the ORACLE_HOME environment variable is set, and the <i>$ORACLE_HOME/network/admin/tnsnames.ora</i> or <i>%ORACLE_HOME%\network\admin\tnsnames.ora</i> file defines the Net Service Name MYDB3:
+      </p>
+      <blockquote>
+<pre>
+sqlplus hr@MYDB3
+</pre>
+      </blockquote>
+      <p>
+        The TWO_TASK (on UNIX or Linux) or LOCAL (on Windows) environment variable can be set to a connection identifier. This removes the need to explicitly enter the connection identifier whenever a connection is made in SQL*Plus or SQL*Plus Instant Client. This UNIX example connects to the
+        database known as MYDB4:
+      </p>
+      <blockquote>
+<pre>
+TNS_ADMIN=/home/user1
+export TNS_ADMIN
+TWO_TASK=MYDB4
+export TWO_TASK
+sqlplus hr
+</pre>
+      </blockquote>
+      <p>
+        On Windows, TNS_ADMIN and LOCAL may be set in the System Properties as described in section 1.2.3
+      </p>
+      <h3 class="H3">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.4 Connecting using AS SYSDBA or AS SYSOPER with SQL*Plus Instant Client</font>
+      </h3>
+      <p>
+        To connect AS SYSDBA or AS SYSOPER to perform DBA tasks, you need to set up an Oracle password file on the database server using the database's <i>orapwd</i> utility. Once this is configured, your SQL*Plus Instant Client connection string might look something like:
+      </p>
+      <blockquote>
+<pre>
+sqlplus sys@MYDB AS SYSDBA
+</pre>
+      </blockquote>
+      <p>
+        See the <i>Oracle Database Administrator's Guide</i> for information on Oracle password files.<br>
+      </p>
+      <h3 class="H3">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.5 Uninstalling Instant Client</font>
+      </h3>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.5.1 Removing the complete Instant Client</font>
+      </h4>
+      <p>
+        If the Linux RPMs were installed, use rpm&nbsp;-qa to find the Instant Client SQL*Plus and Basic package names and run rpm&nbsp;-e to remove them. Otherwise for all platforms manually delete the directory containing the SQL*Plus executable, Oracle libraries and <i>glogin.sql</i>
+      </p>
+      <p>
+        Reset environment variables such as PATH, SQLPATH, LD_LIBRARY_PATH and TNS_ADMIN.
+      </p>
+      <p>
+        Remove <i>tnsnames.ora</i> if necessary.
+      </p>
+      <h4 class="H4">
+        <font face="Arial, Helvetica, sans-serif" color="#330099">1.5.2 Removing only SQL*Plus Instant Client</font>
+      </h4>
+      <p>
+        The SQL*Plus tool can be removed separately from the OCI Instant Client. The remaining libraries enable custom written OCI programs or third party database utilities to connect to a database.
+      </p>
+      <p>
+        If Linux RPMs were installed, use rpm&nbsp;-e only on the SQL*Plus Instant Client package. Otherwise for all platforms manually remove the following SQL*Plus specific files:
+      </p>
+      <table width="90%" summary="SQL*Plus files not needed for OCI Instant Client" border="1">
+        <tbody>
+          <tr>
+            <td colspan="2">
+              <div align="center">
+                <b>Platform</b>
+              </div>
+            </td>
+            <td valign="top" rowspan="2">
+              <b>Description</b>
+            </td>
+          </tr>
+          <tr>
+            <td width="23%">
+              <b>UNIX/Linux</b>
+            </td>
+            <td width="23%">
+              <b>Windows</b>
+            </td>
+          </tr>
+          <tr>
+            <td width="23%">
+              sqlplus
+            </td>
+            <td width="23%">
+              sqlplus.exe
+            </td>
+            <td width="54%">
+              SQL*Plus executable
+            </td>
+          </tr>
+          <tr>
+            <td width="23%">
+              libsqlplus.so
+            </td>
+            <td width="23%">
+              not applicable
+            </td>
+            <td width="54%">
+              SQL*Plus library
+            </td>
+          </tr>
+          <tr>
+            <td width="23%">
+              glogin.sql
+            </td>
+            <td width="23%">
+              glogin.sql
+            </td>
+            <td width="54%">
+              SQL*Plus site profile
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Reset environment variables and remove <i>tnsnames.ora</i> if necessary.
+      </p>
+      <div class="OUTD">
+        <hr>
+      </div>
+      <p class="CopyrightBody">
+        Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.
+      </p>
+      <a name="756138"></a>
+      <p class="CopyrightBody">
+        Copyright &copy; 2003, 2004 Oracle Corporation.
+      </p>
+      <a name="756053"></a>
+      <p class="CopyrightBody">
+        All Rights Reserved.
+      </p>
+      <!-- Start Footer -->
+    </div>
+    <div class="OUTD">
+      <hr>
+    </div>
+  </body>
+</html>
+

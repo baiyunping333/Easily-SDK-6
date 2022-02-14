@@ -37,8 +37,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xdb_lib_test", "..\test\xdb
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xdc_frame_test", "..\test\xdc_frame_test\xdc_frame_test.vcxproj", "{EE57987C-2288-4EE7-B25D-E1B9A97A0D4C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yb_test", "..\test\yb_test\yb_test.vcxproj", "{F6A64FEF-F390-4323-91A1-2C091F4BD27C}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen_glyph", "..\test\gen_glyph\gen_glyph.vcxproj", "{53AFB807-EABF-4066-B593-755FEB5FE09E}"
 EndProject
 Global
@@ -185,12 +183,6 @@ Global
 		{EE57987C-2288-4EE7-B25D-E1B9A97A0D4C}.Release|Win32.Build.0 = Release|Win32
 		{EE57987C-2288-4EE7-B25D-E1B9A97A0D4C}.Release|x64.ActiveCfg = Release|x64
 		{EE57987C-2288-4EE7-B25D-E1B9A97A0D4C}.Release|x64.Build.0 = Release|x64
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Debug|Win32.Build.0 = Debug|Win32
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Debug|x64.ActiveCfg = Debug|Win32
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Release|Win32.ActiveCfg = Release|Win32
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Release|Win32.Build.0 = Release|Win32
-		{F6A64FEF-F390-4323-91A1-2C091F4BD27C}.Release|x64.ActiveCfg = Release|Win32
 		{53AFB807-EABF-4066-B593-755FEB5FE09E}.Debug|Win32.ActiveCfg = Debug|Win32
 		{53AFB807-EABF-4066-B593-755FEB5FE09E}.Debug|Win32.Build.0 = Debug|Win32
 		{53AFB807-EABF-4066-B593-755FEB5FE09E}.Debug|x64.ActiveCfg = Debug|Win32

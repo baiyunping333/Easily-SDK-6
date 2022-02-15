@@ -7,7 +7,7 @@
 
 	@doc fonts document
 
-	@module	fntttf.h | interface file
+	@module	ttf.h | interface file
 
 	@devnote 张文权 2021.01 - 2021.12	v6.0
 ***********************************************************************/

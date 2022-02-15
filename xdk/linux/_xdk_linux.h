@@ -38,7 +38,8 @@ LICENSE.GPL3 for more details.
 #define XDK_SUPPORT_MEMO
 #define XDK_SUPPORT_ERROR
 #define XDK_SUPPORT_DATE
-#define XDK_SUPPORT_MBCS
+//#define XDK_SUPPORT_MBCS
+#define XDK_SUPPORT_ACP
 #define XDK_SUPPORT_ASYNC
 #define XDK_SUPPORT_THREAD_EVENT
 #define XDK_SUPPORT_THREAD_CRITI
@@ -47,7 +48,6 @@ LICENSE.GPL3 for more details.
 #define XDK_SUPPORT_THREAD_QUEUE
 #define XDK_SUPPORT_THREAD
 #define XDK_SUPPORT_PROCESS
-#define XDK_SUPPORT_FILE_BLOCK
 #define XDK_SUPPORT_FILE_FIND
 #define XDK_SUPPORT_FILE
 #define XDK_SUPPORT_SHARE
@@ -57,6 +57,7 @@ LICENSE.GPL3 for more details.
 #define XDK_SUPPORT_SOCK
 #define XDK_SUPPORT_TIMER
 #define XDK_SUPPORT_RANDOM
+#define XDK_SUPPORT_GLYPH
 
 #include <stdio.h>
 #include <wchar.h>

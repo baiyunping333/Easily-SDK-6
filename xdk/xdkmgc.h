@@ -2,8 +2,8 @@
 #ifndef _XDKMGC_H
 #define _XDKMGC_H
 
-#include "gly/glydef.h"
-#include "gly/ttfdef.h"
+#include "gly/gly.h"
+#include "gly/ttf.h"
 
 #include "mgc/mdef.h"
 #include "mgc/mpix.h"

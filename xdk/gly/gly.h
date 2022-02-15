@@ -7,7 +7,7 @@
 
 	@doc glyph document
 
-	@module	glydef.h | interface file
+	@module	gly.h | interface file
 
 	@devnote 张文权 2021.01 - 2021.12	v6.0
 ***********************************************************************/
@@ -68,8 +68,8 @@ typedef struct _glyph_info_t{
 extern "C" {
 #endif
 
-	EXP_API extern glyph_info_t a_glyph_list[a_alyph_list_length];
-	EXP_API extern glyph_info_t c_glyph_list[c_alyph_list_length];
+	EXP_API glyph_info_t a_glyph_list[a_alyph_list_length];
+	EXP_API glyph_info_t c_glyph_list[c_alyph_list_length];
 
 	EXP_API void xfont_from_glyph_info(xfont_t* pxf, const glyph_info_t* pgi);
 

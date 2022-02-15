@@ -24,7 +24,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
 LICENSE.GPL3 for more details.
 ***********************************************************************/
 
-#include "glydef.h"
+#include "gly.h"
 
 #include "../xdkimp.h"
 #include "../xdkstd.h"

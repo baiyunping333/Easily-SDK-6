@@ -148,7 +148,7 @@ int gb2312_byte_to_ucs(const byte_t* src, wchar_t* dest)
 #ifdef XDK_SUPPORT_MBCS
 	return gbk_byte_to_ucs(src, dest);
 #else
-	return gb2312_seek_unicode((unsigned char*)src, (unsigned short*)dest);
+	return gb2312_byte_to_unicode((unsigned char*)src, (unsigned short*)dest);
 #endif
 }
 

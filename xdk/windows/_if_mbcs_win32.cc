@@ -60,4 +60,5 @@ int _ucs_to_utf(const wchar_t* ucs, int len, schar_t* utf, int max)
 		return WideCharToMultiByte(CP_UTF8, 0, ucs, len, utf, max, NULL, NULL);
 }
 
+
 #endif //XDK_SUPPORT_MBCS

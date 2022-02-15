@@ -12,17 +12,21 @@ OUT_PATH = ~/Easily-app-6/linux/sbin/api
 LIBS = -lm -ldl -lutil -lrt
 DIRS = $(wildcard \
 		$(SRC_PATH)/linux/*.c \
+		$(SRC_PATH)/imp/*.c \
 		$(SRC_PATH)/acp/*.c \
 		$(SRC_PATH)/crypt/*.c \
-		$(SRC_PATH)/encode/*.c \
+		$(SRC_PATH)/bar/*.c \
 		$(SRC_PATH)/geo/*.c \
+		$(SRC_PATH)/gly/*.c \
+		$(SRC_PATH)/mgc/*.c \
+		$(SRC_PATH)/zlib/*.c \
+		$(SRC_PATH)/jpg/*.c \
+		$(SRC_PATH)/png/*.c \
 		$(SRC_PATH)/img/*.c \
-		$(SRC_PATH)/imp/*.c \
 		$(SRC_PATH)/lua/*.c \
 		$(SRC_PATH)/net/*.c \
 		$(SRC_PATH)/nmath/*.c \
 		$(SRC_PATH)/tdb/*.c \
-		$(SRC_PATH)/zlib/*.c \
 		$(SRC_PATH)/util/*.c \
 		$(SRC_PATH)/*.c)
 SRCS = $(notdir $(DIRS))
@@ -33,22 +37,40 @@ TARGET = $(OUT_PATH)/$(MODULE).$(VER)
 %.o : $(SRC_PATH)/linux/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
+%.o : $(SRC_PATH)/imp/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
 %.o : $(SRC_PATH)/acp/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
 %.o : $(SRC_PATH)/crypt/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
-%.o : $(SRC_PATH)/encode/%.c
+%.o : $(SRC_PATH)/bar/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
 %.o : $(SRC_PATH)/geo/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
-%.o : $(SRC_PATH)/img/%.c
+%.o : $(SRC_PATH)/bar/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
-%.o : $(SRC_PATH)/imp/%.c
+%.o : $(SRC_PATH)/gly/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
+%.o : $(SRC_PATH)/mgc/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
+%.o : $(SRC_PATH)/zlib/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
+%.o : $(SRC_PATH)/jpg/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
+%.o : $(SRC_PATH)/png/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
+
+%.o : $(SRC_PATH)/img/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
 %.o : $(SRC_PATH)/lua/%.c
@@ -61,9 +83,6 @@ TARGET = $(OUT_PATH)/$(MODULE).$(VER)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
 %.o : $(SRC_PATH)/tdb/%.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
-
-%.o : $(SRC_PATH)/zlib/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
 
 %.o : $(SRC_PATH)/util/%.c

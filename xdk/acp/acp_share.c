@@ -62,6 +62,14 @@ int share_gb2312_seek_unicode(unsigned char* mbs, unsigned short* ucs)
 	}
 
 	ind = GB2312_CODE_INDEX(ch);
+	if (ind < 0 || ind >= CHS_GB2312_COUNT)
+	{
+		if (ucs)
+		{
+			*ucs = ALT_CHAR;
+		}
+		return 1;
+	}
 
 	pb = xshare_lock(acp_gb2312, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
@@ -127,6 +135,12 @@ int share_gb2312_seek_help(const unsigned char* mbs, unsigned char* hlp)
 
 	ch = MAKESHORT(mbs[0], mbs[1]);
 	ind = GB2312_CODE_INDEX(ch);
+	if (ind < 0 || ind >= CHS_GB2312_COUNT)
+	{
+		if (hlp) *hlp = 0;
+
+		return 0;
+	}
 
 	pb = xshare_lock(acp_gb2312, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
@@ -165,6 +179,10 @@ vword_t get_gb2312_code_addr(const byte_t* mbs)
 
 	ch = MAKESHORT(mbs[0], mbs[1]);
 	ind = GB2312_CODE_INDEX(ch);
+	if (ind < 0 || ind >= CHS_GB2312_COUNT)
+	{
+		return 0;
+	}
 
 	pb = xshare_lock(acp_gb2312, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
@@ -198,6 +216,10 @@ bool_t set_gb2312_code_addr(const byte_t* mbs, vword_t addr)
 
 	ch = MAKESHORT(mbs[0], mbs[1]);
 	ind = GB2312_CODE_INDEX(ch);
+	if (ind < 0 || ind >= CHS_GB2312_COUNT)
+	{
+		return bool_false;
+	}
 
 	pb = xshare_lock(acp_gb2312, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
@@ -245,6 +267,14 @@ int share_unicode_seek_gb2312(unsigned short ucs, unsigned char* mbs)
 	}
 
 	ind = UNICODE_CODE_INDEX(ucs);
+	if (ind < 0 || ind >= CHS_UNICODE_COUNT)
+	{
+		if (mbs)
+		{
+			mbs[0] = ALT_CHAR;
+		}
+		return 1;
+	}
 
 	pb = xshare_lock(acp_unicode, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
@@ -259,8 +289,8 @@ int share_unicode_seek_gb2312(unsigned short ucs, unsigned char* mbs)
 	ch = GET_SWORD_LOC(pb, 0);
 	if (mbs)
 	{
-		mbs[0] = GETLCHAR(ch);
-		mbs[1] = GETHCHAR(ch);
+		mbs[0] = GETLBYTE(ch);
+		mbs[1] = GETHBYTE(ch);
 	}
 	xshare_unlock(acp_gb2312, ind * sizeof(acp_t), sizeof(acp_t), pb);
 
@@ -301,6 +331,13 @@ int share_unicode_seek_help(unsigned short ucs, unsigned short* hlp)
 	}
 
 	ind = UNICODE_CODE_INDEX(ucs);
+	if (ind < 0 || ind >= CHS_UNICODE_COUNT)
+	{
+		if (hlp) *hlp = 0;
+
+		return 0;
+	}
+
 	pb = xshare_lock(acp_unicode, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
 	{
@@ -333,6 +370,11 @@ vword_t get_unicode_code_addr(unsigned short ucs)
 	}
 
 	ind = UNICODE_CODE_INDEX(ucs);
+	if (ind < 0 || ind >= CHS_UNICODE_COUNT)
+	{
+		return 0;
+	}
+
 	pb = xshare_lock(acp_unicode, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
 	{
@@ -360,6 +402,11 @@ bool_t set_unicode_code_addr(unsigned short ucs, vword_t addr)
 	}
 
 	ind = UNICODE_CODE_INDEX(ucs);
+	if (ind < 0 || ind >= CHS_UNICODE_COUNT)
+	{
+		return 0;
+	}
+
 	pb = xshare_lock(acp_unicode, ind * sizeof(acp_t), sizeof(acp_t));
 	if (!pb)
 	{
@@ -477,7 +524,7 @@ static xhand_t load_acp_gb2312(const tchar_t* acp_file, const tchar_t* sha_file)
 		}
 		total += n;
 
-		if (ind < CHS_GB2312_COUNT)
+		if (ind >= 0 && ind < CHS_GB2312_COUNT)
 		{
 			xmem_copy(((byte_t*)ph + ind * sizeof(acp_t)), (void*)(pch), 4);
 		}
@@ -581,7 +628,7 @@ static xhand_t load_acp_unicode(const tchar_t* acp_file, const tchar_t* sha_file
 
 		ind = UNICODE_CODE_INDEX(sw);
 
-		//unicode code
+		//gb2312 code
 		pre = nxt;
 		n = 0;
 		while (*nxt != ',' && *nxt != '\n' && *nxt != '\0')
@@ -615,7 +662,7 @@ static xhand_t load_acp_unicode(const tchar_t* acp_file, const tchar_t* sha_file
 		}
 		total += n;
 
-		if (ind < CHS_UNICODE_COUNT)
+		if (ind >= 0 && ind < CHS_UNICODE_COUNT)
 		{
 			xmem_copy(((byte_t*)ph + ind * sizeof(acp_t)), (void*)(pch), 4);
 		}

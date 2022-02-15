@@ -184,7 +184,8 @@ void test_money()
 
 void test_words()
 {
-	const tchar_t* str = _T("这是ABC一段字体测试 文字");
+	//const tchar_t* str = _T("这是ABC一段字体测试 文字");
+	const tchar_t* str = _T("abcd,中文汉字，$￥");
 	int n, total = 0;
 
 	int len = xslen(str);
@@ -597,7 +598,7 @@ void test_printf_big5()
 	FILE* fd = fopen("big.c", "w+");
 	tchar_t hex[5];
 	char cc[8], uc[8];
-	tchar_t wc;
+	wchar_t wc;
 
 	while (!feof(fp))
 	{

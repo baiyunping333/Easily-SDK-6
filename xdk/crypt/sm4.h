@@ -1,51 +1,59 @@
-﻿/*
-* @        file: sm3.h
-* @ description: header file for sm3.c
-* @      author: Gu Yongqiang
-* @        blog: https://blog.csdn.net/guyongqiangx
+﻿/**
+* \file sm4.h
 */
-#ifndef __ROCKY_SM3__H
-#define __ROCKY_SM3__H
+#ifndef XYSSL_SM4_H    
+#define XYSSL_SM4_H    
 
-#define ERR_OK           0
-#define ERR_ERR         -1  /* generic error */
-#define ERR_INV_PARAM   -2  /* invalid parameter */
-#define ERR_TOO_LONG    -3  /* too long */
-#define ERR_STATE_ERR   -4  /* state error */
+#define SM4_ENCRYPT     1    
+#define SM4_DECRYPT     0    
 
-typedef unsigned char      uint8_t;
-typedef unsigned short     uint16_t;
-typedef unsigned int       uint32_t;
-typedef unsigned long long uint64_t;
+/**
+* \brief          SM4 context structure
+*/
+typedef struct
+{
+	int mode;                   /*!<  encrypt/decrypt   */
+	unsigned long sk[32];       /*!<  SM4 subkeys       */
+}
+sm4_context;
 
-typedef struct _SM3_CTX {
-	/* message total length in bytes */
-	uint64_t total;
 
-	/* intermedia hash value for each block */
-	struct {
-		uint32_t a;
-		uint32_t b;
-		uint32_t c;
-		uint32_t d;
-		uint32_t e;
-		uint32_t f;
-		uint32_t g;
-		uint32_t h;
-	}hash;
+#ifdef __cplusplus    
+extern "C" {
+#endif    
 
-	/* last block */
-	struct {
-		uint32_t used;     /* used bytes */
-		uint8_t  buf[64];  /* block data buffer */
-	}last;
-}SM3_CTX;
+	/**
+	* \brief          SM4 key schedule (128-bit, encryption)
+	*
+	* \param ctx      SM4 context to be initialized
+	* \param key      16-byte secret key
+	*/
+	void sm4_setkey_enc(sm4_context *ctx, unsigned char key[16]);
 
-/* https://www.openssl.org/docs/man1.1.1/man3/SHA256_Final.html */
+	/**
+	* \brief          SM4 key schedule (128-bit, decryption)
+	*
+	* \param ctx      SM4 context to be initialized
+	* \param key      16-byte secret key
+	*/
+	void sm4_setkey_dec(sm4_context *ctx, unsigned char key[16]);
 
-int SM3_Init(SM3_CTX *c);
-int SM3_Update(SM3_CTX *c, const void *data, size_t len);
-int SM3_Final(unsigned char *md, SM3_CTX *c);
-unsigned char *SM3(const unsigned char *d, size_t n, unsigned char *md);
-#endif
+	/**
+	* \brief          SM4-ECB block encryption/decryption
+	* \param ctx      SM4 context
+	* \param mode     SM4_ENCRYPT or SM4_DECRYPT
+	* \param length   length of the input data
+	* \param input    input block
+	* \param output   output block
+	*/
+	void sm4_crypt_ecb(sm4_context *ctx,
+		int mode,
+		int length,
+		unsigned char *input,
+		unsigned char *output);
 
+#ifdef __cplusplus    
+}
+#endif    
+
+#endif /* sm4.h */   

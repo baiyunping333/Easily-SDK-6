@@ -272,7 +272,7 @@ bool_t mgc_text_out(visual_t gc, const xfont_t* pxf, const xpoint_t* ppt, int ro
 #if defined(_UNICODE) || defined(UNICODE)
 		n = 1;
 #else
-		n = mbs_sequence(str);
+		n = mbs_sequence(*str);
 #endif
 		str += n;
 		len -= n;

@@ -29,7 +29,7 @@ LICENSE.GPL3 for more details.
 
 #include "mdef.h"
 #include "mpix.h"
-#include "../gly/glydef.h"
+#include "../gly/gly.h"
 
 #define GLY_DRIVER_FIXED		_T("Fixed")
 

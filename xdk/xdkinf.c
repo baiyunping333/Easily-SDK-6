@@ -84,10 +84,10 @@ void xdk_impl_error(if_error_t* pif)
 #ifdef XDK_SUPPORT_MBCS
 void xdk_impl_mbcs(if_mbcs_t* pif)
 {
-	pif->pf_gbk_to_ucs = _gbk_to_ucs;
-	pif->pf_ucs_to_gbk = _ucs_to_gbk;
 	pif->pf_utf_to_ucs = _utf_to_ucs;
 	pif->pf_ucs_to_utf = _ucs_to_utf;
+	pif->pf_gbk_to_ucs = _gbk_to_ucs;
+	pif->pf_ucs_to_gbk = _ucs_to_gbk;
 }
 #endif
 

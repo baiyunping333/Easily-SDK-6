@@ -75,11 +75,13 @@ int _ucs_to_gbk(const wchar_t* ucs, int len, schar_t* gbk, int max)
         len --;
         ucs ++;
     }
+    
+    setlocale(P_ALL, "");
 
     return total;
 }
 
-int _utf8_to_ucs(const schar_t* utf, int len, wchar_t* ucs, int max)
+int _utf_to_ucs(const schar_t* utf, int len, wchar_t* ucs, int max)
 {
     int n, total = 0;
 
@@ -105,7 +107,7 @@ int _utf8_to_ucs(const schar_t* utf, int len, wchar_t* ucs, int max)
     return total;
 }
 
-int _ucs_to_utf8(const wchar_t* ucs, int len, schar_t* utf, int max)
+int _ucs_to_utf(const wchar_t* ucs, int len, schar_t* utf, int max)
 {
     int n, total = 0;
     char chs[4];

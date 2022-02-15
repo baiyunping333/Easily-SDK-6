@@ -24,7 +24,7 @@ MERCHANTABINETY or FITNESS FOR A PARTICULAR PURPOSE.See the
 LICENSE.GPL3 for more details.
 ***********************************************************************/
 
-#include "ttfdef.h"
+#include "ttf.h"
 
 #include "../xdkimp.h"
 #include "../xdkstd.h"

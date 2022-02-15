@@ -34,6 +34,10 @@ LICENSE.GPL3 for more details.
 #include "acp/acp.h"
 #endif
 
+#ifdef XDK_SUPPORT_GLYPH
+#include "gly/gly.h"
+#endif
+
 xdk_mou_t g_xdk_mou = { 0 };
 
 jmp_buf* thread_jump_buff(void)

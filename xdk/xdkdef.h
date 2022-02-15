@@ -164,7 +164,7 @@ LICENSE.GPL3 for more details.
 #define LANG_CN
 
 #include "datdef.h"
-#include "endian.h"
+#include "makword.h"
 #include "encode.h"
 #include "numdef.h"
 #include "chrdef.h"

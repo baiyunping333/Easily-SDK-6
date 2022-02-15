@@ -1410,6 +1410,9 @@
     <ClCompile Include="..\..\xdk\acp\acp_share.c">
       <Filter>源文件\acp</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\xdk\crypt\sm4.c">
+      <Filter>源文件\crypt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\xdk\windows\_xdk_win.h">
@@ -2099,19 +2102,10 @@
     <ClInclude Include="..\..\xdk\mgc\mpap.h">
       <Filter>头文件\mgc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\xdk\gly\glydef.h">
-      <Filter>头文件\gly</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\xdk\gly\ttfdef.h">
-      <Filter>头文件\gly</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\xdk\mgc\mgly.h">
       <Filter>头文件\mgc</Filter>
     </ClInclude>
     <ClInclude Include="..\..\xdk\datdef.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\xdk\endian.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\xdk\bar\barcode.h">
@@ -2173,6 +2167,18 @@
     </ClInclude>
     <ClInclude Include="..\..\xdk\gdidef.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\crypt\sm4.h">
+      <Filter>头文件\crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\makword.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gly\gly.h">
+      <Filter>头文件\gly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\gly\ttf.h">
+      <Filter>头文件\gly</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

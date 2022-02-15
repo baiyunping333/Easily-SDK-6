@@ -25,8 +25,8 @@ LICENSE.GPL3 for more details.
 ***********************************************************************/
 
 
-#ifndef _ENDIAN_H
-#define	_ENDIAN_H
+#ifndef _MAKWORD_H
+#define	_MAKWORD_H
 
 
 #define SWAPSWORD(n)			(((sword_t)(n) & 0x00FF) << 8) | ((sword_t)(n) & 0xFF00) >> 8))

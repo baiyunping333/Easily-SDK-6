@@ -41,9 +41,7 @@ typedef struct _Fixed_driver_t{
 
 static glyph_t create_glyph(const xfont_t* pxf)
 {
-	Fixed_driver_t* pfd;
-
-	TRY_CATCH;
+	Fixed_driver_t* pfd = NULL;
 
 	pfd = (Fixed_driver_t*)xmem_alloc(sizeof(Fixed_driver_t));
 	pfd->head.tag = _HANDLE_GLYPH;
@@ -51,18 +49,7 @@ static glyph_t create_glyph(const xfont_t* pxf)
 	pfd->a_font_glyph = find_glyph_info(_T("ASCII"), pxf);
 	pfd->c_font_glyph = find_glyph_info(_T("GB2312"), pxf);
 	
-	END_CATCH;
-
 	return &(pfd->head);
-ONERROR:
-	XDK_TRACE_LAST;
-
-	if (pfd)
-	{
-		xmem_free(pfd);
-	}
-
-	return NULL;
 }
 
 static void destroy_glyph(glyph_t gly)

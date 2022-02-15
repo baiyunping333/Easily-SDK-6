@@ -243,6 +243,7 @@
     <ClCompile Include="..\..\xdk\crypt\sha4.c" />
     <ClCompile Include="..\..\xdk\crypt\sip.c" />
     <ClCompile Include="..\..\xdk\crypt\sm3.c" />
+    <ClCompile Include="..\..\xdk\crypt\sm4.c" />
     <ClCompile Include="..\..\xdk\crypt\timing.c" />
     <ClCompile Include="..\..\xdk\crypt\x509.c" />
     <ClCompile Include="..\..\xdk\crypt\x509_crl.c" />
@@ -673,6 +674,7 @@
     <ClInclude Include="..\..\xdk\crypt\sha4.h" />
     <ClInclude Include="..\..\xdk\crypt\sip.h" />
     <ClInclude Include="..\..\xdk\crypt\sm3.h" />
+    <ClInclude Include="..\..\xdk\crypt\sm4.h" />
     <ClInclude Include="..\..\xdk\crypt\timing.h" />
     <ClInclude Include="..\..\xdk\crypt\x509.h" />
     <ClInclude Include="..\..\xdk\crypt\x509_crl.h" />
@@ -684,7 +686,7 @@
     <ClInclude Include="..\..\xdk\dlink.h" />
     <ClInclude Include="..\..\xdk\domdef.h" />
     <ClInclude Include="..\..\xdk\encode.h" />
-    <ClInclude Include="..\..\xdk\endian.h" />
+    <ClInclude Include="..\..\xdk\makword.h" />
     <ClInclude Include="..\..\xdk\escape.h" />
     <ClInclude Include="..\..\xdk\expres.h" />
     <ClInclude Include="..\..\xdk\filetable.h" />
@@ -692,8 +694,8 @@
     <ClInclude Include="..\..\xdk\gdiattr.h" />
     <ClInclude Include="..\..\xdk\gdidef.h" />
     <ClInclude Include="..\..\xdk\geo\geo.h" />
-    <ClInclude Include="..\..\xdk\gly\glydef.h" />
-    <ClInclude Include="..\..\xdk\gly\ttfdef.h" />
+    <ClInclude Include="..\..\xdk\gly\gly.h" />
+    <ClInclude Include="..\..\xdk\gly\ttf.h" />
     <ClInclude Include="..\..\xdk\hashtable.h" />
     <ClInclude Include="..\..\xdk\img\bmp.h" />
     <ClInclude Include="..\..\xdk\img\jpg.h" />

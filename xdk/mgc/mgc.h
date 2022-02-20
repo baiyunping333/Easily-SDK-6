@@ -37,17 +37,39 @@ extern "C" {
 
 EXP_API visual_t mgc_create(const tchar_t* devName, const tchar_t* formName, int width, int height, int dpi);
 
-EXP_API void mgc_destroy(visual_t gc);
+EXP_API void mgc_destroy(visual_t mgc);
 
-EXP_API void mgc_get_point(visual_t gc, xcolor_t* pxc, const xpoint_t* ppt);
+EXP_API int mgc_get_rop(visual_t mgc);
 
-EXP_API void mgc_set_point(visual_t gc, const xcolor_t* pxc, const xpoint_t* ppt, int rop);
+EXP_API void mgc_set_rop(visual_t mgc, int rop);
 
-EXP_API bool_t mgc_text_size(visual_t gc, const xfont_t* pxf, const tchar_t* str, int len, xsize_t* pxs);
+EXP_API void mgc_get_point(visual_t mgc, xcolor_t* pxc, const xpoint_t* ppt);
 
-EXP_API bool_t mgc_text_out(visual_t gc, const xfont_t* pxf, const xpoint_t* ppt, int rop, const tchar_t* str, int len);
+EXP_API void mgc_set_point(visual_t mgc, const xcolor_t* pxc, const xpoint_t* ppt);
 
-EXP_API dword_t mgc_save_bytes(visual_t gc, byte_t* buf, dword_t max);
+EXP_API void mgc_text_metric(visual_t mgc, const xfont_t* pxf, xsize_t* pxs);
+
+EXP_API void mgc_text_size(visual_t mgc, const xfont_t* pxf, const tchar_t* str, int len, xsize_t* pxs);
+
+EXP_API void mgc_text_out(visual_t mgc, const xfont_t* pxf, const xpoint_t* ppt, const tchar_t* str, int len);
+
+EXP_API void mgc_text_indicate(visual_t mgc, const xfont_t* pxf, const xface_t* pxa, const tchar_t* str, int len, const xrect_t* pxr, xrect_t*pa, int n);
+
+EXP_API void mgc_text_rect(visual_t mgc, const xfont_t* pxf, const xface_t* pxa, const tchar_t* str, int len, xrect_t* pxr);
+
+EXP_API void mgc_draw_text(visual_t mgc, const xfont_t* pxf, const xface_t* pxa, const xrect_t* pxr, const tchar_t* str, int len);
+
+EXP_API dword_t mgc_save_bytes(visual_t mgc, byte_t* buf, dword_t max);
+
+EXP_API void mgc_draw_line(visual_t mgc, const xpen_t* pxp, const xpoint_t* ppt1, const xpoint_t* ppt2);
+
+EXP_API void mgc_draw_rect(visual_t mgc, const xpen_t* pxp, const xbrush_t* pxb, const xrect_t* pxr);
+
+EXP_API void mgc_draw_triangle(visual_t mgc, const xpen_t* pxp, const xbrush_t* pxb, const xrect_t* pxr, const tchar_t* orient);
+
+EXP_API void mgc_draw_polyline(visual_t mgc, const xpen_t* pxp, const xpoint_t* ppt, int n);
+
+EXP_API void mgc_draw_polygon(visual_t mgc, const xpen_t* pxp, const xbrush_t*pxb, const xpoint_t* ppt, int n);
 
 #ifdef	__cplusplus
 }

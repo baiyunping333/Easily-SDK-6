@@ -95,7 +95,7 @@ static void close_driver(driver_t drv)
 	xmem_free(pdrv);
 }
 
-static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int rop)
+static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int n, int rop)
 {
 	gray_driver_t* pdrv = (gray_driver_t*)drv;
 
@@ -124,13 +124,16 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 				total += (x + w - pdrv->width);
 				break;
 			}
-
-			addr = ((ADDR8)pdrv->addr) + dx + dy * pdrv->line_bytes;
-
-			c = val[total];
-			ind = RGB_GRAY(GET_PIXVAL_R(c), GET_PIXVAL_G(c), GET_PIXVAL_B(c));
-			val[total] = raster_opera(rop, pdrv->table[ind], pdrv->table[*addr]);
-
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + dx + dy * pdrv->line_bytes;
+				if (total < n)
+				{
+					c = val[total];
+					ind = RGB_GRAY(GET_PIXVAL_R(c), GET_PIXVAL_G(c), GET_PIXVAL_B(c));
+					val[total] = raster_opera(rop, pdrv->table[ind], pdrv->table[*addr]);
+				}
+			}
 			total++;
 			dx++;
 		}
@@ -140,7 +143,7 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 	return total;
 }
 
-static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int rop)
+static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int n, int rop)
 {
 	gray_driver_t* pdrv = (gray_driver_t*)drv;
 
@@ -169,16 +172,17 @@ static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL*
 				total += (x + w - pdrv->width);
 				break;
 			}
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + dx + dy * pdrv->line_bytes;
 
-			addr = ((ADDR8)pdrv->addr) + dx + dy * pdrv->line_bytes;
+				c = ((total < n) ? val[total] : val[n - 1]);
+				ind = RGB_GRAY(GET_PIXVAL_R(c), GET_PIXVAL_G(c), GET_PIXVAL_B(c));
+				c = raster_opera(rop, pdrv->table[*addr], pdrv->table[ind]);
+				ind = _find_table_index(pdrv, c);
 
-			c = val[total];
-			ind = RGB_GRAY(GET_PIXVAL_R(c), GET_PIXVAL_G(c), GET_PIXVAL_B(c));
-			c = raster_opera(rop, pdrv->table[*addr], pdrv->table[ind]);
-			ind = _find_table_index(pdrv, c);
-
-			*addr = (ind & 0xFF);
-
+				*addr = (ind & 0xFF);
+			}
 			total++;
 			dx++;
 		}

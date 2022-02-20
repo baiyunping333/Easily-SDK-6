@@ -94,7 +94,7 @@ static void close_driver(driver_t drv)
 	xmem_free(pdrv);
 }
 
-static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int rop)
+static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int n, int rop)
 {
 	mono_driver_t* pdrv = (mono_driver_t*)drv;
 
@@ -123,12 +123,16 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 				total += (x + w - pdrv->width);
 				break;
 			}
-
-			addr = ((ADDR8)pdrv->addr) + (dx >> 3) + dy * pdrv->line_bytes;
-			pos = (dx & 7);
-			ind = ((*addr >> (7 - pos))) & 0x01;
-			val[total] = raster_opera(rop, val[total], pdrv->table[ind]);
-
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + (dx >> 3) + dy * pdrv->line_bytes;
+				if (total < n)
+				{
+					pos = (dx & 7);
+					ind = ((*addr >> (7 - pos))) & 0x01;
+					val[total] = raster_opera(rop, val[total], pdrv->table[ind]);
+				}
+			}
 			total++;
 			dx++;
 		}
@@ -138,7 +142,7 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 	return total;
 }
 
-static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int rop)
+static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int n, int rop)
 {
 	mono_driver_t* pdrv = (mono_driver_t*)drv;
 
@@ -168,17 +172,19 @@ static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL*
 				total += (x + w - pdrv->width);
 				break;
 			}
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + (dx >> 3) + dy * pdrv->line_bytes;
 
-			addr = ((ADDR8)pdrv->addr) + (dx >> 3) + dy * pdrv->line_bytes;
-			pos = (dx & 7);
-			ind = ((*addr >> (7 - pos))) & 0x01;
+				pos = (dx & 7);
+				ind = ((*addr >> (7 - pos))) & 0x01;
 
-			a = raster_opera(rop, pdrv->table[ind], val[total]);
-			ind = _find_table_index(pdrv, a);
-			ind <<= (7 - pos);
+				a = raster_opera(rop, pdrv->table[ind], ((total < n) ? val[total] : val[n - 1]));
+				ind = _find_table_index(pdrv, a);
+				ind <<= (7 - pos);
 
-			*addr = (*addr & bitmask[pos]) | (ind & 0xFF);
-			
+				*addr = (*addr & bitmask[pos]) | (ind & 0xFF);
+			}
 			total++;
 			dx++;
 		}

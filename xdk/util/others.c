@@ -108,35 +108,36 @@ static int _next_book_mark(tchar_t* book_mark)
 }
 
 
-int next_word(const tchar_t* str, int len)
+int peek_word(const tchar_t* str, tchar_t* pch)
 {
+	int n;
+
+	if (str == NULL || *str == _T('\0'))
+		return 0;
+
 #if defined(_UNICODE) || defined(UNICODE)
-	if (len < 0)
-		len = xslen(str);
-	if (is_null(str) || !len)
-		return 0;
-	return 1;
+	n = ucs_sequence(*str);
 #else
-	if (len < 0)
-		len = xslen(str);
-	if (is_null(str) || !len)
-		return 0;
-	return (int)mbs_sequence(*str);
+	n = (int)mbs_sequence(*str);
 #endif
+
+	if (pch) xsncpy(pch, str, n);
+	return n;
 }
 
 int words_count(const tchar_t* str, int len)
 {
-	int n, total = 0;
+	int n = 0, total = 0;
 
 	if (len < 0)
 		len = xslen(str);
 	if (is_null(str) || !len)
 		return 0;
 
-	while (n = next_word((str + total), (len - total)))
+	while (total < len)
 	{
-		total += n;
+		n += peek_word((str + n), NULL);
+		total ++;
 	}
 
 	return total;

@@ -5,6 +5,8 @@
 #include "gly/gly.h"
 #include "gly/ttf.h"
 
+#include "fit/fit.h"
+
 #include "mgc/mdef.h"
 #include "mgc/mpix.h"
 #include "mgc/mgly.h"

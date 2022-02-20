@@ -256,6 +256,7 @@
     <ClCompile Include="..\..\xdk\escape.c" />
     <ClCompile Include="..\..\xdk\expres.c" />
     <ClCompile Include="..\..\xdk\filetable.c" />
+    <ClCompile Include="..\..\xdk\fit\fit_line.c" />
     <ClCompile Include="..\..\xdk\fontutil.c" />
     <ClCompile Include="..\..\xdk\geo\geo.c" />
     <ClCompile Include="..\..\xdk\gly\gly_finder.c" />
@@ -686,6 +687,7 @@
     <ClInclude Include="..\..\xdk\dlink.h" />
     <ClInclude Include="..\..\xdk\domdef.h" />
     <ClInclude Include="..\..\xdk\encode.h" />
+    <ClInclude Include="..\..\xdk\fit\fit.h" />
     <ClInclude Include="..\..\xdk\makword.h" />
     <ClInclude Include="..\..\xdk\escape.h" />
     <ClInclude Include="..\..\xdk\expres.h" />

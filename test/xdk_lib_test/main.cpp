@@ -187,12 +187,13 @@ void test_words()
 	//const tchar_t* str = _T("这是ABC一段字体测试 文字");
 	const tchar_t* str = _T("abcd,中文汉字，$￥");
 	int n, total = 0;
+	tchar_t pch[CHS_LEN + 1] = { 0 };
 
 	int len = xslen(str);
 
-	while (n = next_word((str + total), (len - total)))
+	while (n = peek_word((str + total), pch))
 	{
-		_tprintf(_T("%d\n"), n);
+		_tprintf(_T("%s %d\n"), pch, n);
 		total += n;
 	}
 
@@ -567,6 +568,8 @@ void test_mgc()
 	tchar_t fs[16][5] = { _T("5"), _T("5.5"),_T("6.5"), _T("7.5"), _T("9"), _T("10.5"), _T("12"), _T("14"), _T("15"), _T("16"), _T("18"), _T("22"), _T("24"), _T("26"), _T("36"), _T("42") };
 	xsize_t xs = { 0 };
 
+	mgc_set_rop(mgc, ROP_COPY);
+
 	pt.x = pt.y = 0;
 	for (i = 0; i < 16; i++)
 	{
@@ -574,7 +577,7 @@ void test_mgc()
 		mgc_text_size(mgc, &xf, str, -1, &xs);
 
 		pt.y += xs.h;
-		mgc_text_out(mgc, &xf, &pt, ROP_COPY, str, -1);
+		mgc_text_out(mgc, &xf, &pt, str, -1);
 	}
 
 	dword_t n = mgc_save_bytes(mgc, NULL, MAX_LONG);
@@ -584,6 +587,103 @@ void test_mgc()
 	mgc_destroy(mgc);
 
 	FILE* fp = fopen("demo.bmp", "wb+");
+	fwrite(buf, n, 1, fp);
+	fclose(fp);
+
+	xmem_free(buf);
+}
+
+void test_draw()
+{
+	visual_t mgc = mgc_create(MGC_DEVICE_BITMAP_TRUECOLOR32, MGC_PAPER_P6, 100, 800, SDPI);
+
+	xcolor_t xc;
+	parse_xcolor(&xc, GDI_ATTR_RGB_RED);
+
+	int i, j;
+
+	xfont_t xf;
+	default_xfont(&xf);
+	xscpy(xf.color, GDI_ATTR_RGB_LIGHTWHITE);
+	xscpy(xf.size, _T("12"));
+	xface_t xa;
+	default_xface(&xa);
+	xscpy(xa.text_align, GDI_ATTR_TEXT_ALIGN_NEAR);
+	xscpy(xa.line_align, GDI_ATTR_TEXT_ALIGN_NEAR);
+	xscpy(xa.text_wrap, GDI_ATTR_TEXT_WRAP_LINEBREAK);
+
+	const tchar_t* str = _T("abcd,中文汉字，\n$￥");
+	xsize_t xs = { 0 };
+
+	mgc_set_rop(mgc, ROP_COPY);
+
+	xrect_t xr;
+	xr.x = 0;
+	xr.y = 0;
+	xr.w = 100;
+	xr.h = 100;
+
+	//mgc_text_rect(mgc, &xf, &xa, str, -1, &xr);
+
+	mgc_draw_text(mgc, &xf, &xa, &xr, str, -1);
+
+	xpen_t xp;
+	default_xpen(&xp);
+	xscpy(xp.size, _T("6"));
+	xscpy(xp.color, GDI_ATTR_RGB_WHITE);
+	xscpy(xp.style, GDI_ATTR_STROKE_STYLE_DOTTED);
+
+	xpoint_t pt[5];
+	pt[0].x = 50;
+	pt[0].y = 100;
+	pt[1].x = 80;
+	pt[1].y = 50;
+	pt[2].x = 150;
+	pt[2].y = 100;
+	pt[3].x = 80;
+	pt[3].y = 150;
+	pt[4].x = 50;
+	pt[4].y = 100;
+
+	//mgc_draw_polyline(mgc, &xp, pt, 5);
+	mgc_draw_polygon(mgc, &xp, NULL, pt, 4);
+
+	xscpy(xp.size, _T("4"));
+
+	xscpy(xp.style, GDI_ATTR_STROKE_STYLE_SOLID);
+	pt[0].x = 0;
+	pt[0].y = 170;
+	pt[1].x = 50;
+	pt[1].y = 170;
+	mgc_draw_line(mgc, &xp, &pt[0], &pt[1]);
+
+	xscpy(xp.style, GDI_ATTR_STROKE_STYLE_DASHED);
+	pt[0].x = 0;
+	pt[0].y = 180;
+	pt[1].x = 50;
+	pt[1].y = 180;
+	mgc_draw_line(mgc, &xp, &pt[0], &pt[1]);
+
+	xr.x = 10;
+	xr.y = 200;
+	xr.w = 50;
+	xr.h = 50;
+	mgc_draw_rect(mgc, &xp, NULL, &xr);
+
+	xscpy(xp.style, GDI_ATTR_STROKE_STYLE_SOLID);
+	xr.x = 10;
+	xr.y = 260;
+	xr.w = 50;
+	xr.h = 50;
+	mgc_draw_rect(mgc, &xp, NULL, &xr);
+
+	dword_t n = mgc_save_bytes(mgc, NULL, MAX_LONG);
+	byte_t* buf = (byte_t*)xmem_alloc(n);
+	mgc_save_bytes(mgc, buf, n);
+
+	mgc_destroy(mgc);
+
+	FILE* fp = fopen("draw.bmp", "wb+");
 	fwrite(buf, n, 1, fp);
 	fclose(fp);
 
@@ -836,13 +936,15 @@ int main(int argc, char* argv[])
 
 	//test_hlp();
 
-	test_mgc();
+	//test_mgc();
 
-	//test_ttf();
+test_draw();
 
-	//test_printf_big5();
+//test_ttf();
 
-	xdk_process_uninit();
+//test_printf_big5();
+
+xdk_process_uninit();
 
 #ifdef _OS_WINDOWS
 	getch();

@@ -115,6 +115,12 @@
     <Filter Include="源文件\bar">
       <UniqueIdentifier>{3a2f8a81-a309-459a-bd49-f16bf159ede6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\fit">
+      <UniqueIdentifier>{fdcfecdb-b10a-4053-8146-b92953277617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\fit">
+      <UniqueIdentifier>{c125f135-7f95-4401-98df-ec9b0514c86d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\xdk\windows\_if_cons_win32.cc">
@@ -1413,6 +1419,9 @@
     <ClCompile Include="..\..\xdk\crypt\sm4.c">
       <Filter>源文件\crypt</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\xdk\fit\fit_line.c">
+      <Filter>源文件\fit</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\xdk\windows\_xdk_win.h">
@@ -2179,6 +2188,9 @@
     </ClInclude>
     <ClInclude Include="..\..\xdk\gly\ttf.h">
       <Filter>头文件\gly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xdk\fit\fit.h">
+      <Filter>头文件\fit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

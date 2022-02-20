@@ -138,7 +138,7 @@ static void get_point(device_t dev, const xpoint_t* ppt, xcolor_t* pxc)
 
 	PIXELVAL c;
 
-	c = (*(pdev->driver->getPixels))(pdev->handle, ppt->x, ppt->y, 1, 1, &c, ROP_COPY);
+	c = (*(pdev->driver->getPixels))(pdev->handle, ppt->x, ppt->y, 1, 1, &c, 1, ROP_COPY);
 
 	pxc->a = GET_PIXVAL_A(c);
 	pxc->b = GET_PIXVAL_B(c);
@@ -157,7 +157,40 @@ static void set_point(device_t dev, const xpoint_t* ppt, const xcolor_t* pxc, in
 
 	c = PUT_PIXVAL(pxc->a, pxc->r, pxc->g, pxc->b);
 
-	(*(pdev->driver->setPixels))(pdev->handle, ppt->x, ppt->y, 1, 1, &c, rop);
+	(*(pdev->driver->setPixels))(pdev->handle, ppt->x, ppt->y, 1, 1, &c, 1, rop);
+}
+
+static void draw_points(device_t dev, const xpoint_t* ppt, int n, const xcolor_t* pxc, int m, int rop)
+{
+	bitmap_device_t* pdev = (bitmap_device_t*)dev;
+
+	XDK_ASSERT(dev && dev->tag == _DEVICE_BITMAP);
+	XDK_ASSERT(pdev->handle);
+
+	PIXELVAL c;
+	int i, j = 0;
+
+	for (i = 0; i < n; i++)
+	{
+		c = PUT_PIXVAL(pxc[j].a, pxc[j].r, pxc[j].g, pxc[j].b);
+		if (j < m - 1) j++;
+
+		(*(pdev->driver->setPixels))(pdev->handle, ppt[i].x, ppt[i].y, 1, 1, &c, 1, rop);
+	}
+}
+
+static void fill_points(device_t dev, int x, int y, int w, int h, const xcolor_t* pxc, int rop)
+{
+	bitmap_device_t* pdev = (bitmap_device_t*)dev;
+
+	XDK_ASSERT(dev && dev->tag == _DEVICE_BITMAP);
+	XDK_ASSERT(pdev->handle);
+
+	PIXELVAL c;
+
+	c = PUT_PIXVAL(pxc[0].a, pxc[0].r, pxc[0].g, pxc[0].b);
+
+	(*(pdev->driver->setPixels))(pdev->handle, x, y, w, h, &c, 1, rop);
 }
 
 static void draw_pixmap(device_t dev, int dstx, int dsty, int w, int h, mem_pixmap_ptr pxm, int srcx, int srcy, int rop)
@@ -202,6 +235,40 @@ static dword_t get_bitmap(device_t dev, byte_t* buf, dword_t max)
 	return total;
 }
 
+void horz_line(device_t dev, const xpoint_t* ppt1, const xpoint_t* ppt2, const xcolor_t* pxc, int rop)
+{
+	bitmap_device_t* pdev = (bitmap_device_t*)dev;
+
+	XDK_ASSERT(dev && dev->tag == _DEVICE_BITMAP);
+	XDK_ASSERT(ppt1 != NULL && ppt2 != NULL);
+
+	PIXELVAL c;
+
+	if (pxc)
+		c = PUT_PIXVAL(pxc->a, pxc->r, pxc->g, pxc->b);
+	else
+		c = PUT_PIXVAL(0, 255, 255, 255);
+
+	(*(pdev->driver->drawHorzline))(pdev->handle, ppt1->x, ppt2->x, ppt1->y, c, rop);
+}
+
+void vert_line(device_t dev, const xpoint_t* ppt1, const xpoint_t* ppt2, const xcolor_t* pxc, int rop)
+{
+	bitmap_device_t* pdev = (bitmap_device_t*)dev;
+
+	XDK_ASSERT(dev && dev->tag == _DEVICE_BITMAP);
+	XDK_ASSERT(ppt1 != NULL && ppt2 != NULL);
+
+	PIXELVAL c;
+
+	if (pxc)
+		c = PUT_PIXVAL(pxc->a, pxc->r, pxc->g, pxc->b);
+	else
+		c = PUT_PIXVAL(0, 255, 255, 255);
+
+	(*(pdev->driver->drawVertline))(pdev->handle, ppt1->x, ppt1->y, ppt2->y, c, rop);
+}
+
 /**************************************************************************************************/
 mem_device_t monochrome_bitmap_device = {
 	MGC_DEVICE_BITMAP_MONOCHROME,
@@ -213,12 +280,14 @@ mem_device_t monochrome_bitmap_device = {
 	close_device,
 	get_point,
 	set_point,
-	NULL,
-	NULL,
+	draw_points,
+	fill_points,
 	draw_pixmap,
 	stretch_pixmap,
 	get_size,
-	get_bitmap
+	get_bitmap,
+	horz_line,
+	vert_line
 };
 
 mem_device_t grayscale_bitmap_device = {
@@ -231,12 +300,14 @@ mem_device_t grayscale_bitmap_device = {
 	close_device,
 	get_point,
 	set_point,
-	NULL,
-	NULL,
+	draw_points,
+	fill_points,
 	draw_pixmap,
 	stretch_pixmap,
 	get_size,
-	get_bitmap
+	get_bitmap,
+	horz_line,
+	vert_line
 };
 
 mem_device_t truecolor16_bitmap_device = {
@@ -249,12 +320,14 @@ mem_device_t truecolor16_bitmap_device = {
 	close_device,
 	get_point,
 	set_point,
-	NULL,
-	NULL,
+	draw_points,
+	fill_points,
 	draw_pixmap,
 	stretch_pixmap,
 	get_size,
-	get_bitmap
+	get_bitmap,
+	horz_line,
+	vert_line
 };
 
 mem_device_t truecolor24_bitmap_device = {
@@ -267,12 +340,14 @@ mem_device_t truecolor24_bitmap_device = {
 	close_device,
 	get_point,
 	set_point,
-	NULL,
-	NULL,
+	draw_points,
+	fill_points,
 	draw_pixmap,
 	stretch_pixmap,
 	get_size,
-	get_bitmap
+	get_bitmap,
+	horz_line,
+	vert_line
 };
 
 mem_device_t truecolor32_bitmap_device = {
@@ -285,10 +360,12 @@ mem_device_t truecolor32_bitmap_device = {
 	close_device,
 	get_point,
 	set_point,
-	NULL,
-	NULL,
+	draw_points,
+	fill_points,
 	draw_pixmap,
 	stretch_pixmap,
 	get_size,
-	get_bitmap
+	get_bitmap,
+	horz_line,
+	vert_line
 };

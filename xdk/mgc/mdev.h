@@ -49,12 +49,14 @@ typedef struct _mem_device_t{
 	void(*closeDevice)(device_t dev);
 	void(*getPoint)(device_t dev, const xpoint_t* ppt, xcolor_t* pxc);
 	void(*setPoint)(device_t dev, const xpoint_t* ppt, const xcolor_t* pxc, int rop);
-	void(*moveTo)(device_t dev, const xpoint_t* ppt);
-	void(*lineTo)(device_t dev, const xpoint_t* ppt);
+	void(*drawPoints)(device_t dev, const xpoint_t* ppt, int n, const xcolor_t* pxc, int c, int rop);
+	void(*fillPoints)(device_t dev, int x, int y, int w, int h, const xcolor_t* pxc, int rop);
 	void(*drawPixmap)(device_t dev, int dstx, int dsty, int w, int h, mem_pixmap_ptr pxm, int srcx, int srcy, int rop);
 	void(*stretchPixmap)(device_t dev, int dstx, int dsty, int dstw, int dsth, mem_pixmap_ptr pxm, int srcx, int srcy, int srcw, int srch, int rop);
 	void(*getSize)(device_t dev, dword_t* pTotal, dword_t* pPixel);
 	dword_t(*getBitmap)(device_t dev, byte_t* buf, dword_t max);
+	void(*horzLine)(device_t dev, const xpoint_t* ppt1, const xpoint_t* ppt2, const xcolor_t* pxc, int rop);
+	void(*vertLine)(device_t dev, const xpoint_t* ppt1, const xpoint_t* ppt2, const xcolor_t* pxc, int rop);
 } mem_device_t;
 
 extern mem_device_t monochrome_bitmap_device;

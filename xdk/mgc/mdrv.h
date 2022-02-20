@@ -47,8 +47,8 @@ typedef struct _mem_driver_t{
 
 	driver_t(*openDriver)(int width, int height);
 	void(*closeDriver)(driver_t drv);
-	int(*getPixels)(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int rop);
-	void(*setPixels)(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int rop);
+	int(*getPixels)(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int n, int rop);
+	void(*setPixels)(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int n, int rop);
 	void(*drawHorzline)(driver_t drv, int x1, int x2, int y, PIXELVAL c, int rop);
 	void(*drawVertline)(driver_t drv, int x, int y1, int y2, PIXELVAL c, int rop);
 	void(*drawPixmap)(driver_t drv, int dstx, int dsty, int w, int h, mem_pixmap_ptr pxm, int srcx, int srcy, int rop);

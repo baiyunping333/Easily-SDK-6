@@ -82,7 +82,7 @@ static void close_driver(driver_t drv)
 	xmem_free(pdrv);
 }
 
-static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int rop)
+static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int n, int rop)
 {
 	color32_driver_t* pdrv = (color32_driver_t*)drv;
 
@@ -112,15 +112,20 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 				break;
 			}
 
-			addr = ((ADDR32)pdrv->addr) + dx + dy * pdrv->line_dwords;
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR32)pdrv->addr) + dx + dy * pdrv->line_dwords;
+				if (total < n)
+				{
+					r = GET_COLOR32_R(*addr);
+					g = GET_COLOR32_G(*addr);
+					b = GET_COLOR32_B(*addr);
 
-			r = GET_COLOR32_R(*addr);
-			g = GET_COLOR32_G(*addr);
-			b = GET_COLOR32_B(*addr);
+					c = PUT_PIXVAL(0, r, g, b);
 
-			c = PUT_PIXVAL(0, r, g, b);
-			val[total] = raster_opera(rop, val[total], c);
-
+					val[total] = raster_opera(rop, val[total], c);
+				}
+			}
 			total++;
 			dx++;
 		}
@@ -130,7 +135,7 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 	return total;
 }
 
-static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int rop)
+static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int n, int rop)
 {
 	color32_driver_t* pdrv = (color32_driver_t*)drv;
 
@@ -160,19 +165,22 @@ static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL*
 				break;
 			}
 
-			addr = ((ADDR32)pdrv->addr) + dx + dy * pdrv->line_dwords;
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR32)pdrv->addr) + dx + dy * pdrv->line_dwords;
 
-			r = GET_COLOR32_R(*addr);
-			g = GET_COLOR32_G(*addr);
-			b = GET_COLOR32_B(*addr);
+				r = GET_COLOR32_R(*addr);
+				g = GET_COLOR32_G(*addr);
+				b = GET_COLOR32_B(*addr);
 
-			c = raster_opera(rop, PUT_PIXVAL(0, r, g, b), val[total]);
+				c = raster_opera(rop, PUT_PIXVAL(0, r, g, b), ((total < n) ? val[total] : val[n - 1]));
 
-			r = GET_PIXVAL_R(c);
-			g = GET_PIXVAL_G(c);
-			b = GET_PIXVAL_B(c);
+				r = GET_PIXVAL_R(c);
+				g = GET_PIXVAL_G(c);
+				b = GET_PIXVAL_B(c);
 
-			*addr = PUT_COLOR32(r, g, b);
+				*addr = PUT_COLOR32(r, g, b);
+			}
 
 			total++;
 			dx++;

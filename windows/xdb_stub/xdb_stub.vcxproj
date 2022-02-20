@@ -70,21 +70,21 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(VC_IncludePath);$(WindowsSdk_71A_IncludePath);..\..\include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSdk_71A_LibraryPath_x86);..\lib;</LibraryPath>
-    <OutDir>d:\easily-app-5\windows\bin\</OutDir>
+    <OutDir>d:\easily-app-6\windows\bin\</OutDir>
     <IntDir>d:\easily-tmp\windows\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);..\lib\x64;</LibraryPath>
-    <OutDir>d:\easily-app-5\windows\bin64\</OutDir>
+    <OutDir>d:\easily-app-6\windows\bin64\</OutDir>
     <IntDir>d:\easily-tmp\windows\$(ProjectName)\x64\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);..\lib;</LibraryPath>
-    <OutDir>d:\easily-app-5\windows\bin\</OutDir>
+    <OutDir>d:\easily-app-6\windows\bin\</OutDir>
     <IntDir>d:\easily-tmp\windows\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
@@ -92,7 +92,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\include;</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);..\lib\x64;</LibraryPath>
-    <OutDir>d:\easily-app-5\windows\bin64\</OutDir>
+    <OutDir>d:\easily-app-6\windows\bin64\</OutDir>
     <IntDir>d:\easily-tmp\windows\$(ProjectName)\x64\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>

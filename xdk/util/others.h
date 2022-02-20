@@ -48,7 +48,7 @@ EXP_API void bytes_turn(byte_t* ba, int n);
 
 EXP_API int format_password(const tchar_t* sz, tchar_t* buf, int max);
 
-EXP_API int next_word(const tchar_t* str, int len);
+EXP_API int peek_word(const tchar_t* str, tchar_t* pch);
 
 EXP_API int words_count(const tchar_t* str, int len);
 

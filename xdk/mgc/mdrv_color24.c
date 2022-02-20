@@ -72,7 +72,7 @@ static void close_driver(driver_t drv)
 	xmem_free(pdrv);
 }
 
-static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int rop)
+static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, int n, int rop)
 {
 	color24_driver_t* pdrv = (color24_driver_t*)drv;
 
@@ -102,15 +102,19 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 				break;
 			}
 
-			addr = ((ADDR8)pdrv->addr) + dx * 3 + dy * pdrv->line_bytes;
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + dx * 3 + dy * pdrv->line_bytes;
+				if (total < n)
+				{
+					b = addr[0];
+					g = addr[1];
+					r = addr[2];
 
-			b = addr[0];
-			g = addr[1];
-			r = addr[2];
-
-			c = PUT_PIXVAL(0, r, g, b);
-			val[total] = raster_opera(rop, val[total], c);
-
+					c = PUT_PIXVAL(0, r, g, b);
+					val[total] = raster_opera(rop, val[total], c);
+				}
+			}
 			total++;
 			dx++;
 		}
@@ -120,7 +124,7 @@ static int get_pixels(driver_t drv, int x, int y, int w, int h, PIXELVAL* val, i
 	return total;
 }
 
-static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int rop)
+static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL* val, int n, int rop)
 {
 	color24_driver_t* pdrv = (color24_driver_t*)drv;
 
@@ -150,22 +154,24 @@ static void set_pixels(driver_t drv, int x, int y, int w, int h, const PIXELVAL*
 				break;
 			}
 
-			addr = ((ADDR8)pdrv->addr) + dx * 3 + dy * pdrv->line_bytes;
+			if (VALID_COORDINATE(dx, dy))
+			{
+				addr = ((ADDR8)pdrv->addr) + dx * 3 + dy * pdrv->line_bytes;
 
-			b = addr[0];
-			g = addr[1];
-			r = addr[2];
+				b = addr[0];
+				g = addr[1];
+				r = addr[2];
 
-			c = raster_opera(rop, PUT_PIXVAL(0, r, g, b), val[total]);
+				c = raster_opera(rop, PUT_PIXVAL(0, r, g, b), ((total < n) ? val[total] : val[n - 1]));
 
-			r = GET_PIXVAL_R(c);
-			g = GET_PIXVAL_G(c);
-			b = GET_PIXVAL_B(c);
+				r = GET_PIXVAL_R(c);
+				g = GET_PIXVAL_G(c);
+				b = GET_PIXVAL_B(c);
 
-			addr[0] = b;
-			addr[1] = g;
-			addr[2] = r;
-
+				addr[0] = b;
+				addr[1] = g;
+				addr[2] = r;
+			}
 			total++;
 			dx++;
 		}
